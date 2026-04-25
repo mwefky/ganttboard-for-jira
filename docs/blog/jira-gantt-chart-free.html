@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- TODO: change ganttboard.app domain in canonical/OG tags if hosting elsewhere -->
+<!-- TODO: add <meta name="google-site-verification" content="..."> and GA4 tag here -->
+<title>Gantt Chart for Jira, Free — GanttBoard for Jira</title>
+<meta name="description" content="Add a Gantt chart to Jira Cloud for free in about two minutes. Walkthrough with screenshots, BigGantt alternative, honest comparison, and when to outgrow it.">
+<link rel="canonical" href="https://mwefky.github.io/ganttboard-for-jira/blog/jira-gantt-chart-free">
+<link rel="icon" type="image/png" href="/ganttboard-for-jira/assets/logo-144.png">
+<meta property="og:title" content="Gantt Chart for Jira, Free — GanttBoard for Jira">
+<meta property="og:description" content="Add a Gantt chart to Jira Cloud for free in two minutes. Install walkthrough, BigGantt alternative, honest comparison.">
+<meta property="og:image" content="https://mwefky.github.io/ganttboard-for-jira/assets/screenshots/01_hero.png">
+<meta property="og:url" content="https://mwefky.github.io/ganttboard-for-jira/blog/jira-gantt-chart-free">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gantt Chart for Jira, Free — GanttBoard for Jira">
+<meta name="twitter:description" content="Add a Gantt chart to Jira Cloud for free in two minutes.">
+<meta name="twitter:image" content="https://mwefky.github.io/ganttboard-for-jira/assets/screenshots/01_hero.png">
+<link rel="stylesheet" href="/ganttboard-for-jira/assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/ganttboard-for-jira/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/ganttboard-for-jira/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/ganttboard-for-jira/">Home</a>
+      <a href="/ganttboard-for-jira/features.html">Features</a>
+      <a href="/ganttboard-for-jira/pricing.html">Pricing</a>
+      <a href="/ganttboard-for-jira/docs.html">Docs</a>
+      <a href="/ganttboard-for-jira/blog/jira-gantt-chart-free.html" aria-current="page">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="article">
+  <p class="meta">April 23, 2026 &middot; 8 minute read</p>
+  <h1>Gantt chart for Jira, free: a 2-minute install guide</h1>
+  <p>If you are on Jira Cloud and need a Gantt chart without paying $1.50/user/month from day one, here is how to add one for free in about two minutes. This guide is written for anyone who has opened Jira, looked for a native Gantt view, found only the narrow Basic Roadmap in a Scrum project, and gone looking for a real timeline. We will cover why Jira does not ship a proper Gantt by default, how to install a free Gantt chart plugin for Jira, how to get your issues onto that chart, how to draw dependencies between tasks, and how the free tier compares honestly against the paid giants of the Atlassian Marketplace. If you are just looking for the plugin, skip to <a href="#install">the 2-minute install</a>.</p>
+
+  <div class="video-embed" style="margin: 24px 0;">
+    <iframe
+      src="https://www.youtube.com/embed/YZza8h4HOvk"
+      title="GanttBoard for Jira demo video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy"></iframe>
+  </div>
+
+  <h2>Why Jira does not include Gantt charts by default</h2>
+  <p>Jira is built around the agile board &mdash; Scrum sprints, Kanban columns, a backlog. A Gantt chart is a different mental model: a horizontal timeline of tasks with dates, durations, and dependencies between them. Jira has always been cautious about wiring agile concepts to dates, because one of the core agile ideas is that commitments happen at the sprint level, not at the Gantt level. That is why the built-in <strong>Basic Roadmap</strong> in a Scrum project only shows epics against a loose time axis, with no dependency arrows, no critical path, no baseline, and no spreadsheet table next to it.</p>
+  <p>Atlassian does offer <strong>Advanced Roadmaps</strong>, but that is only available on the <em>Jira Premium</em> and <em>Enterprise</em> tiers, which start at roughly $14.54/user/month &mdash; dramatically more than a dedicated Gantt plugin. Advanced Roadmaps is also opinionated about cross-project portfolio planning rather than single-project timeline work, so even teams on Premium often end up installing a Marketplace Gantt anyway. The Atlassian Marketplace is where the ecosystem has collectively agreed to put Gantt functionality, and it is the right place to look.</p>
+  <p>The tradeoff, historically, has been cost. The big three paid Gantt plugins &mdash; BigGantt (Appfire), WBS Gantt (Ricksoft), and Structure.Gantt (Tempo) &mdash; charge between $1.27 and $1.82 per user per month once you pass 10 users. GanttTable went paid in April 2026 at $1.50. Many small teams looked at those numbers and simply lived without a proper Gantt. The good news is that is no longer necessary.</p>
+
+  <h2 id="install">The 2-minute install</h2>
+  <p>This section walks through installing <strong>GanttBoard for Jira</strong>, a native Forge app that is free through August 1, 2026 and free forever for teams of 10 or fewer. It is the easiest free Gantt for Jira Cloud to set up. You need Jira admin permissions on the target site; if you do not have them, ask whoever does &mdash; the install takes less than a minute.</p>
+  <ol>
+    <li>
+      <strong>Open the Atlassian Marketplace listing.</strong> Go to <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=blog&amp;utm_medium=install-step&amp;utm_campaign=launch">the GanttBoard page</a>. You will see the standard Marketplace card with screenshots and the <em>Runs on Atlassian</em> badge &mdash; that badge means the app is built on Forge, which is Atlassian's vetted app platform, so nothing leaves your cloud tenant.
+      <img src="/ganttboard-for-jira/assets/screenshots/01_hero.png" alt="GanttBoard listing page on the Atlassian Marketplace" loading="lazy">
+    </li>
+    <li>
+      <strong>Click "Get it now".</strong> If you admin multiple Jira Cloud sites, a dropdown appears. Pick the one you want the Gantt chart added to. Atlassian installs the app in the background &mdash; no zip files, no server restart, no configuration.
+    </li>
+    <li>
+      <strong>Open any Scrum or Kanban project.</strong> A new tab called <strong>GanttBoard</strong> appears in the project sidebar. Click it. That is the install done. Everything after this is just about getting your issues onto the chart.
+      <img src="/ganttboard-for-jira/assets/screenshots/02_filters.png" alt="GanttBoard tab showing filters popover inside a Jira project" loading="lazy">
+    </li>
+  </ol>
+  <p>Total clicks from Marketplace to working Gantt: five. No server setup, no database to provision, no license key to paste in. This is the entire pitch of Forge as an app platform, and it is why free tools can actually be free &mdash; GanttBoard does not have hosting costs to recoup.</p>
+
+  <h2>Your first Gantt chart</h2>
+  <p>A Gantt chart draws task bars from a start date to an end date. GanttBoard reads the <strong>Start date</strong> and <strong>Due date</strong> fields straight off your Jira issues &mdash; whichever issues already have both dates show up on the timeline the instant you open the tab. This is the big advantage of a native Forge approach: there is no separate "GanttBoard database" of tasks. Your Jira issues are the source of truth, and moving a bar in GanttBoard writes the new due date directly back to Jira.</p>
+  <p>If an issue is missing a start or due date, it still appears in the spreadsheet table on the left side of the split view. You can double-click the date cells to fill them in, and the bar appears on the right the moment both dates exist. If Start date is not exposed on your project's issue view, you may need to add it via <em>Project settings</em> &rarr; <em>Issue layout</em> in Jira &mdash; this is a one-time configuration and it applies to your entire project.</p>
+  <p>Once your issues are on the chart, the interaction model is the one you would expect from a desktop Gantt tool:</p>
+  <ul>
+    <li><strong>Drag a bar horizontally</strong> to change the due date. The start and end shift together, keeping duration constant.</li>
+    <li><strong>Drag the right edge</strong> of a bar to change duration, keeping the start date fixed.</li>
+    <li><strong>Double-click a status cell</strong> to transition the issue through its workflow &mdash; GanttBoard reads your Jira workflow and offers the legal next statuses.</li>
+    <li><strong>Double-click an assignee cell</strong> to reassign. GanttBoard pulls users from the same place Jira does.</li>
+    <li><strong>Click any blue issue key</strong> to open the issue in Jira in a new tab.</li>
+  </ul>
+  <p>Zoom runs from Day to Quarter through four discrete levels. A red <em>TODAY</em> line runs down the whole chart. Overdue items get a red exclamation badge and a dashed border so you can see slipped work at a glance. Zero-duration issues render as diamond milestones. This is the part of a Gantt you use every day, and the learning curve is essentially zero if you have ever used another timeline tool. For the full feature list see <a href="/ganttboard-for-jira/features.html">the features page</a>.</p>
+
+  <h2>Adding dependencies</h2>
+  <p>A Gantt chart without dependencies is really just a date picker with a background image. The real value &mdash; critical path, auto-scheduling, seeing what slips when something is late &mdash; only emerges once you link tasks together. GanttBoard supports the four classical project-management dependency types: Finish-to-Start (the most common), Start-to-Start, Finish-to-Finish, and Start-to-Finish. The UI is designed to make the common case fast.</p>
+  <p>Hover over any bar and two small dots become visible &mdash; one at the start edge, one at the end edge. Click and hold a dot, then drag to a dot on another bar. GanttBoard watches which two dots you connected and infers the dependency type: end-to-start is FS, start-to-start is SS, end-to-end is FF, and start-to-end is SF. A dialog opens with the correct type pre-selected, so you can either confirm or tweak. If you want to add a lag (for example, "the second task must start three business days after the first one finishes"), there is a number field for it right there.</p>
+  <img src="/ganttboard-for-jira/assets/screenshots/04_dep.png" alt="Dragging a dependency arrow between two task bars" loading="lazy">
+  <p>Once two tasks are linked, an L-shaped arrow connects them. Once you have a few arrows, turn on <strong>critical path</strong> from the toolbar and the longest chain through your project is highlighted automatically &mdash; that is the set of tasks where any slip pushes your deadline. This is the classic CPM (Critical Path Method) algorithm applied to your Jira issues, and it works identically to what MS Project or Primavera would produce.</p>
+
+  <h2>What you get for free vs. what competitors charge for</h2>
+  <p>Here is the honest price comparison across the main Jira Gantt chart plugins, pulled from the Atlassian Marketplace in April 2026. The "11&ndash;100 users" column is the tier most paying teams land on, and it is where the pricing differences bite.</p>
+  <div class="table-wrap">
+    <table class="compare">
+      <thead>
+        <tr>
+          <th>Plugin</th>
+          <th>1&ndash;10</th>
+          <th>11&ndash;100</th>
+          <th>101&ndash;250</th>
+          <th>Runs on Atlassian</th>
+          <th>Critical path</th>
+          <th>Baselines</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="us"><strong>GanttBoard</strong></td>
+          <td class="us yes">Free</td>
+          <td class="us"><strong>$1.20</strong></td>
+          <td class="us">$0.80</td>
+          <td class="us yes">Yes</td>
+          <td class="us yes">Yes</td>
+          <td class="us yes">Yes</td>
+        </tr>
+        <tr>
+          <td>GanttTable</td>
+          <td class="yes">Free</td>
+          <td>$1.50</td>
+          <td>$1.00</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+          <td class="no">No</td>
+        </tr>
+        <tr>
+          <td>WBS Gantt</td>
+          <td class="yes">Free</td>
+          <td>$1.32</td>
+          <td>$0.90</td>
+          <td class="no">No</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+        </tr>
+        <tr>
+          <td>BigGantt</td>
+          <td class="yes">Free</td>
+          <td>$1.82</td>
+          <td>$1.10</td>
+          <td class="no">No</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+        </tr>
+        <tr>
+          <td>Structure.Gantt</td>
+          <td>$1.00/u</td>
+          <td>$1.27</td>
+          <td>$0.91</td>
+          <td class="no">No</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Three things are worth calling out. First, GanttBoard is the cheapest in every tier where it has competition, and until August 1, 2026 it is free for any team size &mdash; that is the launch window. Second, GanttBoard and GanttTable are the only two with the <em>Runs on Atlassian</em> Forge badge, which is a meaningful data-residency and security signal for organizations that care about where their Jira data lives. Third, the feature gap is small: every plugin listed supports critical path; most support baselines; all support the four dependency types. What you are buying at the higher price points is brand history, not capability.</p>
+  <p>GanttBoard's <a href="/ganttboard-for-jira/pricing.html">pricing page</a> lays out the tier structure in full, including enterprise levels down to $0.04/user/month at 10,000+ users. The short version: if you are a team of 10 or fewer, you will never be charged. If you are a team of 11&ndash;100, you will pay $1.20/user/month starting in August 2026 &mdash; a single user for less than the cost of a coffee.</p>
+
+  <h2>When you would outgrow this</h2>
+  <p>Honest section. GanttBoard is not the right tool for every team. If you need <strong>full resource-leveling with drag-and-drop capacity bars</strong>, Structure.Gantt and BigPicture have more mature workflows for that (and correspondingly larger price tags). If you are running <strong>cross-project portfolio planning at enterprise scale</strong> with dozens of programs and custom governance, BigPicture is still the category leader. If you specifically need <strong>Jira Data Center</strong> rather than Cloud, GanttBoard does not ship a Data Center build yet &mdash; WBS Gantt or Structure.Gantt are the established options. And if you want <strong>ten years of case studies and enterprise references</strong>, GanttBoard launched in April 2026 and simply does not have them yet.</p>
+  <p>For everything else &mdash; single-project Gantt, multi-project with <a href="/ganttboard-for-jira/features.html">filters and saved views</a>, critical path, baselines, standup facilitation, and an honest price &mdash; GanttBoard covers the 80% of Gantt planning that teams actually use day to day. If you outgrow it, the data is still in Jira, so switching costs stay low.</p>
+
+  <h2>Conclusion</h2>
+  <p>The gap between "I wish Jira had a Gantt chart" and "I have a Gantt chart in Jira" used to involve a procurement conversation and a $1.50-per-user-per-month invoice. It does not anymore. Two minutes on the Atlassian Marketplace gives you a native Forge Gantt with critical path, baselines, dependencies, and auto-scheduling &mdash; free for every team size until August 2026, and free forever for teams of ten or fewer. Install it and see whether it fits your planning. If it does not, uninstall with one click. Your Jira data never moved.</p>
+  <p><a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=blog&amp;utm_medium=cornerstone&amp;utm_campaign=launch">Install GanttBoard free &rarr;</a></p>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.15.1</div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
+      <a href="mailto:minawefky3@gmail.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
+</body>
+</html>

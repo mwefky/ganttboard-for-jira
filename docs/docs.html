@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- TODO: change ganttboard.app domain in canonical/OG tags if hosting elsewhere -->
+<!-- TODO: add <meta name="google-site-verification" content="..."> and GA4 tag here -->
+<title>Getting Started Docs — GanttBoard for Jira</title>
+<meta name="description" content="Install GanttBoard for Jira, build your first Gantt chart, add dependencies, and use keyboard shortcuts. Step-by-step with screenshots. 5-minute read.">
+<link rel="canonical" href="https://mwefky.github.io/ganttboard-for-jira/docs.html">
+<link rel="icon" type="image/png" href="/ganttboard-for-jira/assets/logo-144.png">
+<meta property="og:title" content="Getting Started Docs — GanttBoard for Jira">
+<meta property="og:description" content="Install, build your first Gantt chart, add dependencies, and use keyboard shortcuts. Step-by-step with screenshots.">
+<meta property="og:image" content="https://mwefky.github.io/ganttboard-for-jira/assets/screenshots/01_hero.png">
+<meta property="og:url" content="https://mwefky.github.io/ganttboard-for-jira/docs.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Getting Started Docs — GanttBoard for Jira">
+<meta name="twitter:description" content="Install, build your first Gantt chart, add dependencies, and use keyboard shortcuts.">
+<meta name="twitter:image" content="https://mwefky.github.io/ganttboard-for-jira/assets/screenshots/01_hero.png">
+<link rel="stylesheet" href="/ganttboard-for-jira/assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/ganttboard-for-jira/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/ganttboard-for-jira/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/ganttboard-for-jira/">Home</a>
+      <a href="/ganttboard-for-jira/features.html">Features</a>
+      <a href="/ganttboard-for-jira/pricing.html">Pricing</a>
+      <a href="/ganttboard-for-jira/docs.html" aria-current="page">Docs</a>
+      <a href="/ganttboard-for-jira/blog/jira-gantt-chart-free.html">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Getting started with GanttBoard</h1>
+      <p class="lead">From Marketplace install to your first Gantt chart in under five minutes.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="max-width: 820px;">
+      <nav class="docs-toc" aria-label="Contents">
+        <strong>Contents</strong>
+        <ol>
+          <li><a href="#install">Install GanttBoard</a></li>
+          <li><a href="#first-chart">Your first Gantt chart</a></li>
+          <li><a href="#dependencies">Setting dependencies</a></li>
+          <li><a href="#shortcuts">Keyboard shortcuts</a></li>
+        </ol>
+      </nav>
+
+      <article id="install">
+        <h2>1. Install GanttBoard</h2>
+        <p>GanttBoard is distributed through the Atlassian Marketplace. Installation takes about 30 seconds and requires Jira admin rights on the target site.</p>
+        <ol class="step-list">
+          <li>
+            <h3>Open the Marketplace listing</h3>
+            <p>Go to <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=docs&amp;utm_medium=install-step&amp;utm_campaign=launch">the GanttBoard Marketplace page</a> and click <strong>Get it now</strong>. If you are not logged in, Atlassian will prompt you.</p>
+          </li>
+          <li>
+            <h3>Pick your Jira site</h3>
+            <p>If you admin more than one Jira Cloud site, a dropdown appears. Choose the site you want to install into and click <strong>Install app</strong>. Atlassian handles the rest.</p>
+          </li>
+          <li>
+            <h3>Open any Scrum or Kanban project</h3>
+            <p>Navigate to any Jira project that uses the Scrum or Kanban template. A new tab labelled <strong>GanttBoard</strong> appears in the project sidebar.</p>
+            <img src="/ganttboard-for-jira/assets/screenshots/01_hero.png" alt="GanttBoard tab open inside a Jira project" loading="lazy">
+          </li>
+        </ol>
+      </article>
+
+      <article id="first-chart">
+        <h2>2. Your first Gantt chart</h2>
+        <p>GanttBoard draws bars from the <strong>start date</strong> and <strong>due date</strong> fields on your Jira issues. If an issue has both, it appears on the timeline immediately. If an issue is missing one, it shows up in the table but has no bar yet.</p>
+        <ol class="step-list">
+          <li>
+            <h3>Add dates to your Jira issues</h3>
+            <p>Open any issue in your project and fill in the <strong>Start date</strong> and <strong>Due date</strong> fields. If Start date is not shown on your issue view, add it via <em>Configure</em> &rarr; <em>Project settings</em> &rarr; <em>Issue layout</em>.</p>
+          </li>
+          <li>
+            <h3>Open the GanttBoard tab</h3>
+            <p>Click <strong>GanttBoard</strong> in the Jira project sidebar. The Table + Gantt split view is the default. Your issues appear in the spreadsheet on the left and as bars on the right.</p>
+          </li>
+          <li>
+            <h3>Switch layouts and zoom</h3>
+            <p>Use the toolbar segmented control to toggle Table-only, Gantt-only, or the default split. Use the zoom dropdown (or <kbd>Ctrl</kbd>+<kbd>+</kbd> / <kbd>Ctrl</kbd>+<kbd>&minus;</kbd>) to move between Day / Week / Month / Quarter granularity.</p>
+          </li>
+          <li>
+            <h3>Edit in place</h3>
+            <p>Drag any bar horizontally to change its due date. Drag its right edge to change duration. Double-click a status cell in the table to transition the issue. Every change persists to Jira in real time.</p>
+            <img src="/ganttboard-for-jira/assets/screenshots/05_edit.png" alt="Inline editing inside GanttBoard" loading="lazy">
+          </li>
+        </ol>
+      </article>
+
+      <article id="dependencies">
+        <h2>3. Setting dependencies</h2>
+        <p>Dependencies are drawn with L-shaped arrows between task bars. GanttBoard supports all four project-management dependency types: Finish-to-Start (FS), Start-to-Start (SS), Finish-to-Finish (FF), and Start-to-Finish (SF).</p>
+        <ol class="step-list">
+          <li>
+            <h3>Hover over a bar to see the dots</h3>
+            <p>Every bar has a small dot at its start and end edges. Hovering makes them visible.</p>
+          </li>
+          <li>
+            <h3>Drag from one dot to another bar's dot</h3>
+            <p>Click and hold on a dot, then drag to a dot on another bar. GanttBoard auto-detects the dependency type from the dots you chose &mdash; end-to-start is FS, start-to-start is SS, and so on.</p>
+            <img src="/ganttboard-for-jira/assets/screenshots/04_dep.png" alt="Dragging a dependency arrow between two bars" loading="lazy">
+          </li>
+          <li>
+            <h3>Confirm the type and lag</h3>
+            <p>The Dependency dialog opens with the detected type pre-selected. You can change the type or add a lag / lead time in days, then click <strong>Create</strong>. The arrow renders immediately.</p>
+          </li>
+          <li>
+            <h3>Turn on critical path</h3>
+            <p>Once you have dependencies, click the <strong>Critical path</strong> toggle in the overflow menu. GanttBoard runs CPM (forward pass, backward pass, float calculation) and highlights the longest chain across the project in red.</p>
+          </li>
+        </ol>
+        <div class="callout">
+          Prefer menus? Right-click any bar and choose <strong>Link to...</strong> to pick a target issue from a dropdown instead of dragging.
+        </div>
+      </article>
+
+      <article id="shortcuts">
+        <h2>4. Keyboard shortcuts</h2>
+        <p>Press <kbd>?</kbd> at any time inside GanttBoard to open the full shortcuts panel. <em>Mod</em> means <kbd>Cmd</kbd> on macOS and <kbd>Ctrl</kbd> on Windows / Linux.</p>
+        <div class="shortcut-grid">
+          <section class="shortcut-section">
+            <h3>Navigation</h3>
+            <dl>
+              <dt>Previous task</dt><dd><kbd>&uarr;</kbd></dd>
+              <dt>Next task</dt><dd><kbd>&darr;</kbd></dd>
+              <dt>Collapse group</dt><dd><kbd>&larr;</kbd></dd>
+              <dt>Expand group</dt><dd><kbd>&rarr;</kbd></dd>
+              <dt>Open task in Jira</dt><dd><kbd>Enter</kbd></dd>
+              <dt>Clear selection</dt><dd><kbd>Esc</kbd></dd>
+              <dt>Next field</dt><dd><kbd>Tab</kbd></dd>
+              <dt>Previous field</dt><dd><kbd>Shift</kbd><kbd>Tab</kbd></dd>
+            </dl>
+          </section>
+          <section class="shortcut-section">
+            <h3>Selection</h3>
+            <dl>
+              <dt>Select task</dt><dd><kbd>Click</kbd></dd>
+              <dt>Toggle selection</dt><dd><kbd>Mod</kbd><kbd>Click</kbd></dd>
+              <dt>Range select</dt><dd><kbd>Shift</kbd><kbd>Click</kbd></dd>
+              <dt>Select all tasks</dt><dd><kbd>Mod</kbd><kbd>A</kbd></dd>
+            </dl>
+          </section>
+          <section class="shortcut-section">
+            <h3>Editing</h3>
+            <dl>
+              <dt>Undo</dt><dd><kbd>Mod</kbd><kbd>Z</kbd></dd>
+              <dt>Redo</dt><dd><kbd>Mod</kbd><kbd>Shift</kbd><kbd>Z</kbd></dd>
+              <dt>Delete selected</dt><dd><kbd>Delete</kbd></dd>
+              <dt>New dependency from selection</dt><dd><kbd>Shift</kbd><kbd>D</kbd></dd>
+              <dt>Toggle expand / collapse</dt><dd><kbd>Space</kbd></dd>
+            </dl>
+          </section>
+          <section class="shortcut-section">
+            <h3>View</h3>
+            <dl>
+              <dt>Zoom in</dt><dd><kbd>Mod</kbd><kbd>+</kbd></dd>
+              <dt>Zoom out</dt><dd><kbd>Mod</kbd><kbd>&minus;</kbd></dd>
+              <dt>Show shortcuts</dt><dd><kbd>?</kbd></dd>
+            </dl>
+          </section>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="cta-block">
+        <h2>Stuck on something?</h2>
+        <p>Email <a href="mailto:minawefky3@gmail.com" style="color: #FFFFFF; text-decoration: underline;">minawefky3@gmail.com</a> or open a GitHub issue. We reply within one business day.</p>
+        <a class="btn btn-primary btn-lg" href="https://github.com/mwefky/ganttboard-for-jira/issues">Open a support issue &rarr;</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.15.1</div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
+      <a href="mailto:minawefky3@gmail.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
+</body>
+</html>

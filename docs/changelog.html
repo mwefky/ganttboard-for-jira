@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- TODO: change ganttboard.app domain in canonical/OG tags if hosting elsewhere -->
+<!-- TODO: add <meta name="google-site-verification" content="..."> and GA4 tag here -->
+<title>Changelog — GanttBoard for Jira</title>
+<meta name="description" content="Release notes for GanttBoard for Jira. Latest version 3.15.1 (April 2026) — full feature list and version history.">
+<link rel="canonical" href="https://mwefky.github.io/ganttboard-for-jira/changelog.html">
+<link rel="icon" type="image/png" href="/ganttboard-for-jira/assets/logo-144.png">
+<meta property="og:title" content="Changelog — GanttBoard for Jira">
+<meta property="og:description" content="Release notes for GanttBoard for Jira. Latest version 3.15.1, April 2026.">
+<meta property="og:image" content="https://mwefky.github.io/ganttboard-for-jira/assets/screenshots/01_hero.png">
+<meta property="og:url" content="https://mwefky.github.io/ganttboard-for-jira/changelog.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Changelog — GanttBoard for Jira">
+<meta name="twitter:description" content="Release notes for GanttBoard for Jira. Latest version 3.15.1, April 2026.">
+<meta name="twitter:image" content="https://mwefky.github.io/ganttboard-for-jira/assets/screenshots/01_hero.png">
+<link rel="stylesheet" href="/ganttboard-for-jira/assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/ganttboard-for-jira/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/ganttboard-for-jira/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/ganttboard-for-jira/">Home</a>
+      <a href="/ganttboard-for-jira/features.html">Features</a>
+      <a href="/ganttboard-for-jira/pricing.html">Pricing</a>
+      <a href="/ganttboard-for-jira/docs.html">Docs</a>
+      <a href="/ganttboard-for-jira/blog/jira-gantt-chart-free.html">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Changelog</h1>
+      <p class="lead">Every shipped change, newest first. Updates reach your Jira Cloud site automatically through Forge &mdash; there is nothing to download.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="max-width: 820px;">
+      <article class="changelog-entry">
+        <h2>3.15.1</h2>
+        <p class="changelog-date">April 2026</p>
+        <p>Removed the in-panel <em>Open in GanttBoard</em> deep-link button while we complete cross-project-type navigation testing. Will return in a future release.</p>
+      </article>
+
+      <article class="changelog-entry">
+        <h2>3.15.0 &mdash; Marketplace launch</h2>
+        <p class="changelog-date">April 2026</p>
+        <p>First public release on the Atlassian Marketplace. The full GanttBoard feature set is available from day one:</p>
+        <ul>
+          <li>Full Gantt timeline with drag-to-reschedule and drag-to-resize bars</li>
+          <li>Spreadsheet table view with resizable, reorderable, freezable columns</li>
+          <li>Four dependency types (FS / SS / FF / SF) with drag-to-create and lag support</li>
+          <li>Critical path (CPM) highlighting with float calculation</li>
+          <li>Baselines &mdash; save snapshots, show drift with ghost bars</li>
+          <li>Auto-scheduling across the full dependency graph</li>
+          <li>Saved views and color rules</li>
+          <li>Facilitated standup mode with shuffled roster</li>
+          <li>MS Project XML round-trip import / export</li>
+          <li>PNG and CSV export of the active Gantt</li>
+          <li>Keyboard shortcuts &mdash; press <kbd>?</kbd> for the full panel</li>
+          <li>Light and dark mode that follows your Jira theme</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.15.1</div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
+      <a href="mailto:minawefky3@gmail.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
+</body>
+</html>
