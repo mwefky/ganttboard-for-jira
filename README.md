@@ -83,7 +83,7 @@ Full details in [PRIVACY.md](./PRIVACY.md) and [SECURITY.md](./SECURITY.md).
 
 ## Documentation
 
-Full user guide and keyboard shortcut reference: **[ganttboard.app/docs](https://ganttboard.app/docs)** *(launching with the public site — same content, searchable)*.
+Full user guide and keyboard shortcut reference: **[getganttboard.com/docs](https://getganttboard.com/docs)** *(launching with the public site — same content, searchable)*.
 
 Until the site is live, browse the guides in this repo:
 

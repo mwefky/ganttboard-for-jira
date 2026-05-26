@@ -9,7 +9,7 @@ Static HTML/CSS/JS marketing site. No framework, no build step.
 3. Build and deployment: **Deploy from a branch**.
 4. Branch: `main`, Folder: `/docs/landing`.
 5. Save. The site is live at `https://<username>.github.io/<repo>/` within a minute.
-6. (Optional) Add custom domain `ganttboard.app` in repo settings. Add a `CNAME` record pointing to `<username>.github.io` at your DNS provider. Enable "Enforce HTTPS".
+6. (Optional) Add custom domain `getganttboard.com` in repo settings. Add a `CNAME` record pointing to `<username>.github.io` at your DNS provider. Enable "Enforce HTTPS".
 
 The empty `.nojekyll` file prevents GitHub Pages from running Jekyll, which would otherwise ignore files and folders starting with underscores.
 
@@ -20,7 +20,7 @@ Before first deploy, replace these placeholders across every file:
 | Placeholder | Replace with | Files |
 |---|---|---|
 | `https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira` | Actual Atlassian Marketplace listing URL, e.g. `https://marketplace.atlassian.com/apps/123456/ganttboard-for-jira` | All `.html` files |
-| `ganttboard.app` | Your actual domain, if different | All `.html` files, `sitemap.xml`, `robots.txt` |
+| `getganttboard.com` | Your actual domain, if different | All `.html` files, `sitemap.xml`, `robots.txt` |
 
 Quickest way on macOS / Linux:
 
@@ -71,4 +71,4 @@ docs/landing/
 - No JS frameworks. One small inline `<script>` per page for the mobile nav toggle; the home page adds a second tiny cycler for the screenshot showcase.
 - No Google Fonts, no third-party trackers, no external CSS.
 - Open Graph + Twitter Card meta set on every page. JSON-LD `SoftwareApplication` schema only on `index.html`.
-- Canonical URLs, sitemap, and robots all assume `https://ganttboard.app/`. Edit if hosting elsewhere.
+- Canonical URLs, sitemap, and robots all assume `https://getganttboard.com/`. Edit if hosting elsewhere.
