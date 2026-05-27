@@ -167,7 +167,7 @@ If this Privacy Policy changes materially, the "Last updated" date will be revis
 
 - **Support:** https://github.com/mwefky/ganttboard-for-jira/issues
 - **Security:** https://github.com/mwefky/ganttboard-for-jira/security/advisories/new
-- **Email:** minawefky3@gmail.com
+- **Email:** dev@getganttboard.com
 - **Marketplace listing:** https://marketplace.atlassian.com/apps/ganttboard-for-jira
 
 ---

@@ -25,7 +25,7 @@ If you discover a security vulnerability in GanttBoard for Jira, please report i
 ### How to report
 - **Preferred:** Open a private security advisory on GitHub:
   https://github.com/mwefky/ganttboard-for-jira/security/advisories/new
-- **Alternative:** Email the publisher at minawefky3@gmail.com with subject `[SECURITY] GanttBoard for Jira`
+- **Alternative:** Email the publisher at dev@getganttboard.com with subject `[SECURITY] GanttBoard for Jira`
 
 ### What to include
 - A description of the vulnerability
@@ -124,5 +124,5 @@ No admin-level scopes, no organization-wide scopes, no other products' scopes.
 
 - **Security reports:** https://github.com/mwefky/ganttboard-for-jira/security/advisories/new
 - **General support:** https://github.com/mwefky/ganttboard-for-jira/issues
-- **Email:** minawefky3@gmail.com
+- **Email:** dev@getganttboard.com
 - **Atlassian Marketplace listing:** https://marketplace.atlassian.com/apps/ganttboard-for-jira

@@ -8,7 +8,7 @@
 
 GanttBoard is a native Atlassian Forge app that adds a full Gantt chart and spreadsheet view to any Jira Cloud project. Critical path, baselines, auto-scheduling, saved views, color rules, Standup mode, and MS Project XML round-trip — all in the free tier.
 
-Free for everyone through **August 1, 2026**. Paid tiers then start at **$1.20/user/month** (11–100 users), scaling down to **$0.04/user/month** at 1,000+ users — a fraction of BigGantt, WBS Gantt, or GanttTable.
+Free for everyone through **October 1, 2026**. Paid tiers then start at **$1.20/user/month** (11–100 users), scaling down to **$0.04/user/month** at 1,000+ users — a fraction of BigGantt, WBS Gantt, or GanttTable.
 
 ---
 
@@ -55,7 +55,7 @@ See the full demo: [youtube.com/watch?v=YZza8h4HOvk](https://www.youtube.com/wat
 | 251–1,000 | $0.25 |
 | 1,001+ | $0.12 → $0.04 |
 
-Free for everyone until **August 1, 2026**. See full pricing on the [Marketplace listing](https://marketplace.atlassian.com/apps/ganttboard-for-jira).
+Free for everyone until **October 1, 2026**. See full pricing on the [Marketplace listing](https://marketplace.atlassian.com/apps/ganttboard-for-jira).
 
 ---
 
@@ -63,7 +63,7 @@ Free for everyone until **August 1, 2026**. See full pricing on the [Marketplace
 
 - **Questions or bug reports:** [Open an issue](https://github.com/mwefky/ganttboard-for-jira/issues)
 - **Security vulnerabilities:** [Open a private advisory](https://github.com/mwefky/ganttboard-for-jira/security/advisories/new) — do **not** file a public issue
-- **Email:** minawefky3@gmail.com
+- **Email:** dev@getganttboard.com
 
 Response SLA: acknowledgement within 3 business days, fix for critical issues within 14.
 

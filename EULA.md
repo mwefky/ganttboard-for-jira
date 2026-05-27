@@ -69,8 +69,8 @@ You retain all rights to Your data. The Publisher claims no ownership or license
 
 ## 7. Fees and Subscription
 
-- The App is **free for all users through August 1, 2026**.
-- After August 1, 2026, paid tiers apply per the pricing published on the Atlassian Marketplace listing. Users with 1–10 seats continue to use the App free of charge on the "Free" tier.
+- The App is **free for all users through October 1, 2026**.
+- After October 1, 2026, paid tiers apply per the pricing published on the Atlassian Marketplace listing. Users with 1–10 seats continue to use the App free of charge on the "Free" tier.
 - Billing and collection are handled by Atlassian on the Publisher's behalf. Your billing relationship for the App is governed by Atlassian's billing terms.
 
 ---
@@ -80,7 +80,7 @@ You retain all rights to Your data. The Publisher claims no ownership or license
 Support is provided on a commercially reasonable best-effort basis via:
 
 - GitHub Issues: https://github.com/mwefky/ganttboard-for-jira/issues
-- Email: minawefky3@gmail.com
+- Email: dev@getganttboard.com
 
 Response targets (not guaranteed SLAs):
 - Acknowledgement within 3 business days
@@ -140,6 +140,6 @@ This EULA, together with the Atlassian Marketplace Terms of Use, the [Privacy Po
 
 ## Contact
 
-- **Email:** minawefky3@gmail.com
+- **Email:** dev@getganttboard.com
 - **Issues:** https://github.com/mwefky/ganttboard-for-jira/issues
 - **Marketplace listing:** https://marketplace.atlassian.com/apps/ganttboard-for-jira
