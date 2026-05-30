@@ -73,6 +73,34 @@
   gtag('js', new Date());
   gtag('config', 'AW-18198456393');
 </script>
+<!-- Google Ads conversion handler (Google-official) -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD',
+      'value': 1.0,
+      'currency': 'EGP',
+      'event_callback': callback
+  });
+  return false;
+}
+
+// Auto-attach to all Marketplace CTA links
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="marketplace.atlassian.com"]').forEach(function(link) {
+    var url = link.href;
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      gtag_report_conversion(url);
+    });
+  });
+});
+</script>
 </head>
 <body>
 <header class="site-header">
