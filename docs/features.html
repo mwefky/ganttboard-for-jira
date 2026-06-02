@@ -3,23 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- TODO: change getganttboard.com domain in canonical/OG tags if hosting elsewhere -->
-<!-- TODO: add <meta name="google-site-verification" content="..."> and GA4 tag here -->
 <title>Features — GanttBoard for Jira</title>
-<meta name="description" content="Every GanttBoard feature: critical path, baselines, drag-to-create dependencies, standup mode, inline editing, filters, sprint view, export to PNG.">
-<link rel="canonical" href="https://getganttboard.com/features.html">
+<meta name="description" content="Every feature in GanttBoard for Jira: timeline, dependencies, critical path, baselines, auto-scheduling, inline editing, standup mode, sprint view, saved views, color rules, calendar, and export.">
+<link rel="canonical" href="https://getganttboard.com/features">
 <link rel="icon" type="image/png" href="/assets/logo-144.png">
 <meta property="og:title" content="Features — GanttBoard for Jira">
-<meta property="og:description" content="Critical path, baselines, drag-to-create dependencies, standup mode, inline editing, sprint view. Every feature in the native Forge Gantt app.">
-<meta property="og:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
-<meta property="og:url" content="https://getganttboard.com/features.html">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Features — GanttBoard for Jira">
-<meta name="twitter:description" content="Critical path, baselines, drag-to-create dependencies, standup mode. Every feature in the native Forge Gantt app.">
-<meta name="twitter:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
+<meta property="og:description" content="Timeline, dependencies, critical path, baselines, auto-scheduling, standup mode, export and more.">
+<meta property="og:image" content="https://getganttboard.com/assets/screenshots/07_overview.png">
+<meta property="og:url" content="https://getganttboard.com/features">
 <link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .feature-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:24px 0;}
+  .feature-card{display:block;padding:18px;border:1px solid var(--border,#dfe1e6);border-radius:8px;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s;background:#fff;}
+  .feature-card:hover{box-shadow:0 6px 18px rgba(9,30,66,.12);transform:translateY(-2px);}
+  .feature-card h3{margin:0 0 6px;font-size:16px;color:#0052CC;}
+  .feature-card p{margin:0;color:#6B778C;font-size:14px;line-height:1.45;}
+</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
 <script>
@@ -28,31 +27,16 @@
   gtag('js', new Date());
   gtag('config', 'AW-18198456393');
 </script>
-<!-- Google Ads conversion handler (Google-official) -->
 <script>
 function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD',
-      'value': 1.0,
-      'currency': 'EGP',
-      'event_callback': callback
-  });
+  var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+  gtag('event', 'conversion', { 'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD', 'value': 1.0, 'currency': 'EGP', 'event_callback': callback });
   return false;
 }
-
-// Auto-attach to all Marketplace CTA links
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('a[href*="marketplace.atlassian.com"]').forEach(function(link) {
     var url = link.href;
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      gtag_report_conversion(url);
-    });
+    link.addEventListener('click', function(e) { e.preventDefault(); gtag_report_conversion(url); });
   });
 });
 </script>
@@ -67,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
     <nav id="primary-nav" class="nav" aria-label="Primary">
       <a href="/">Home</a>
-      <a href="/features.html" aria-current="page">Features</a>
+      <a href="/features.html">Features</a>
       <a href="/pricing.html">Pricing</a>
       <a href="/docs.html">Docs</a>
       <a href="/blog/jira-gantt-chart-free.html">Blog</a>
@@ -75,127 +59,68 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
   </div>
 </header>
-
 <main>
-  <section class="hero">
-    <div class="container">
-      <h1>Every feature in GanttBoard for Jira</h1>
-      <p class="lead">Eight headline capabilities, all built on Atlassian Forge. No external servers, no sync engine, no proprietary database. Just your Jira issues, visualized properly.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <article class="feature-row">
-        <div class="feature-text">
-          <h2>Native Forge app</h2>
-          <p>GanttBoard runs entirely inside Atlassian Cloud. No external servers, no data leaving your tenant, no third-party analytics, no telemetry. It uses only your Jira permissions (<code>read:jira-work</code>, <code>write:jira-work</code>, <code>read:jira-user</code>) and passes Atlassian's security review as a "Runs on Atlassian" app.</p>
-          <p class="muted">Most competitors (BigGantt, WBS, Structure.Gantt) are Connect apps that host your data on third-party infrastructure. GanttBoard does not.</p>
-        </div>
-        <div class="feature-img">
-          <img src="/assets/screenshots/01_hero.png" alt="GanttBoard split view inside a Jira project" loading="lazy">
-        </div>
-      </article>
-
-      <article class="feature-row reverse">
-        <div class="feature-text">
-          <h2>Drag-to-create dependencies</h2>
-          <p>Every bar has a small dot at its start and end. Drag from one dot to another bar's dot and GanttBoard auto-detects the dependency type:</p>
-          <ul>
-            <li>end &rarr; start = Finish-to-Start (FS)</li>
-            <li>start &rarr; start = Start-to-Start (SS)</li>
-            <li>end &rarr; end = Finish-to-Finish (FF)</li>
-            <li>start &rarr; end = Start-to-Finish (SF)</li>
-          </ul>
-          <p>The Dependency dialog opens with the right type pre-selected &mdash; confirm or tweak the lag. Right-click any bar for a menu-driven "Link to..." mode if you prefer.</p>
-        </div>
-        <div class="feature-img">
-          <img src="/assets/screenshots/04_dep.png" alt="Dragging between two bar dots to create a dependency" loading="lazy">
-        </div>
-      </article>
-
-      <article class="feature-row">
-        <div class="feature-text">
-          <h2>One-click Standup mode</h2>
-          <p>Click one button and GanttBoard turns your Gantt into a facilitated standup tool. It collects every assignee, shuffles them, and walks the team through one speaker at a time &mdash; showing only their rows, auto-zooming to Day granularity, and panning to TODAY.</p>
-          <p>Green checkmarks appear as each speaker finishes. A bottom people bar lets you jump to anyone out of order. Overdue items are highlighted; completed work is hidden for the ceremony.</p>
-        </div>
-        <div class="feature-img">
-          <img src="/assets/screenshots/03_standup.png" alt="Standup mode walking through one team member at a time" loading="lazy">
-        </div>
-      </article>
-
-      <article class="feature-row reverse">
-        <div class="feature-text">
-          <h2>Active Sprint view</h2>
-          <p>One click filters the whole board down to whatever sprint is currently running &mdash; no JQL to write, no filter config to remember. It just works because GanttBoard reads your sprint data directly from Jira.</p>
-          <p>Combine it with the Filters popover to slice further by Epic, Status, Assignee, or Type. A live count badge on the Filters button shows how many are active.</p>
-        </div>
-        <div class="feature-img">
-          <img src="/assets/screenshots/02_filters.png" alt="Filters popover with active filters and count badge" loading="lazy">
-        </div>
-      </article>
-
-      <article class="feature-row">
-        <div class="feature-text">
-          <h2>Inline status + assignee edit</h2>
-          <p>Double-click a Status cell to see a dropdown with your workflow statuses &mdash; picking one transitions the Jira issue. Double-click an Assignee cell to reassign. Drag a bar to write the new due date straight back to Jira. Every edit persists in real time &mdash; your Jira issues remain the source of truth.</p>
-          <p>Click any blue issue key (or double-click any bar) to open the issue in Jira.</p>
-        </div>
-        <div class="feature-img">
-          <img src="/assets/screenshots/05_edit.png" alt="Inline status dropdown being edited" loading="lazy">
-        </div>
-      </article>
-
-      <article class="feature-row reverse">
-        <div class="feature-text">
-          <h2>Critical path (CPM)</h2>
-          <p>Forward pass, backward pass, float calculation &mdash; the classic CPM algorithm, applied automatically to your dependency graph. GanttBoard highlights the longest chain across your project so you can see exactly which tasks drive your deadline.</p>
-          <p>Toggle critical path on and off from the toolbar. Combined with auto-scheduling, you get a full what-if analysis without leaving Jira.</p>
-        </div>
-        <div class="feature-img">
-          <img src="/assets/screenshots/06_cp_baseline.png" alt="Critical path highlighted in red across dependent bars" loading="lazy">
-        </div>
-      </article>
-
-      <article class="feature-row">
-        <div class="feature-text">
-          <h2>Baselines</h2>
-          <p>Save a snapshot of all task dates at any moment &mdash; a baseline. Toggle "Show baseline" later to see drift: a subtle ghost bar appears under each task showing its original planned dates, so you can answer "how far off plan are we?" at a glance.</p>
-          <p>Multiple baselines are supported. The newest one auto-selects after saving, but you can compare against any previous snapshot.</p>
-        </div>
-        <div class="feature-img">
-          <img src="/assets/screenshots/06_cp_baseline.png" alt="Baseline ghost bars showing drift below live bars" loading="lazy">
-        </div>
-      </article>
-
-      <article class="feature-row reverse">
-        <div class="feature-text">
-          <h2>Click key &rarr; open in Jira</h2>
-          <p>Single-click the blue issue key on any row to open that issue in Jira in a new tab. Double-click a bar does the same. Your Gantt and your Jira issue view stay connected &mdash; no context switching, no copy-pasting issue keys.</p>
-          <p class="muted">The deep-link "Open in GanttBoard" panel button is temporarily hidden in v3.15.1 while we complete cross-project-type navigation testing; it will return in a future release. See the <a href="/changelog.html">changelog</a>.</p>
-        </div>
-        <div class="feature-img">
-          <img src="/assets/screenshots/05_edit.png" alt="Clicking an issue key to open it in Jira" loading="lazy">
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="container">
-      <div class="cta-block">
-        <h2>Everything above, free through October 1, 2026</h2>
-        <p>Install from the Atlassian Marketplace, open any Scrum or Kanban project, click the GanttBoard tab. That's it.</p>
-        <a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=features-cta&amp;utm_campaign=launch">Install GanttBoard free &rarr;</a>
-      </div>
-    </div>
-  </section>
+<article class="article">
+  <h1>Every feature in GanttBoard for Jira</h1>
+  <p>A free, <em>Runs on Atlassian</em> Gantt chart for Jira Cloud. Click any feature for a closer look with a screenshot.</p>
+  <img src="/assets/screenshots/07_overview.png" alt="GanttBoard for Jira overview" loading="lazy" style="width:100%;border:1px solid #dfe1e6;border-radius:8px;margin:16px 0;">
+  <div class="feature-grid">
+      <a class="feature-card" href="/features/gantt-timeline.html">
+        <h3>Gantt timeline</h3>
+        <p>Drag bars to reschedule; dates write straight back to Jira.</p>
+      </a>
+      <a class="feature-card" href="/features/task-dependencies.html">
+        <h3>Task dependencies</h3>
+        <p>Draw FS, SS, FF and SF links by dragging dot to dot.</p>
+      </a>
+      <a class="feature-card" href="/features/critical-path.html">
+        <h3>Critical path</h3>
+        <p>Highlight the longest chain — where any slip moves your deadline.</p>
+      </a>
+      <a class="feature-card" href="/features/baselines.html">
+        <h3>Baselines</h3>
+        <p>Snapshot the plan and watch it drift against reality.</p>
+      </a>
+      <a class="feature-card" href="/features/auto-scheduling.html">
+        <h3>Auto-scheduling</h3>
+        <p>Cascade dates along dependencies in one click.</p>
+      </a>
+      <a class="feature-card" href="/features/inline-editing.html">
+        <h3>Inline editing</h3>
+        <p>Edit status, assignee and dates in the table — saved to Jira.</p>
+      </a>
+      <a class="feature-card" href="/features/standup-mode.html">
+        <h3>Standup mode</h3>
+        <p>Run a focused standup: one assignee at a time, randomized.</p>
+      </a>
+      <a class="feature-card" href="/features/sprint-view.html">
+        <h3>Sprint view</h3>
+        <p>See sprint boundaries as bands across the timeline.</p>
+      </a>
+      <a class="feature-card" href="/features/saved-views-filters.html">
+        <h3>Saved views &amp; filters</h3>
+        <p>Filter by sprint, assignee, status — then save the view.</p>
+      </a>
+      <a class="feature-card" href="/features/color-rules.html">
+        <h3>Color rules</h3>
+        <p>Color bars by status, assignee, type or any field.</p>
+      </a>
+      <a class="feature-card" href="/features/working-days-calendar.html">
+        <h3>Working days &amp; calendar</h3>
+        <p>Set working days and holidays; scheduling respects them.</p>
+      </a>
+      <a class="feature-card" href="/features/export.html">
+        <h3>Export (PNG &amp; CSV)</h3>
+        <p>Export the chart as a PNG image or the data as CSV.</p>
+      </a>
+  </div>
+  <p>Free for teams of 10 or fewer, forever &mdash; and free for any team size through October 1, 2026. See the <a href="/pricing.html">pricing page</a> for every tier.</p>
+<p><a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=feature&amp;utm_medium=cta&amp;utm_campaign=launch">Get GanttBoard free &rarr;</a></p>
+</article>
 </main>
-
 <footer class="site-footer">
   <div class="container">
-    <div>&copy; 2026 GanttBoard &middot; v3.15.1</div>
+    <div>&copy; 2026 GanttBoard &middot; v3.25.0</div>
     <nav aria-label="Footer">
       <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
       <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
@@ -204,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
   </div>
 </footer>
-
 <script>
   (function(){
     var btn = document.querySelector('.nav-toggle');

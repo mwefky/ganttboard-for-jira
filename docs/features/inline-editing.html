@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inline Editing of Status, Assignee &amp; Dates | GanttBoard</title>
+<meta name="description" content="Edit a Jira issue’s status, assignee, and dates directly in the GanttBoard table. Changes save straight back to Jira.">
+<link rel="canonical" href="https://getganttboard.com/features/inline-editing">
+<link rel="icon" type="image/png" href="/assets/logo-144.png">
+<meta property="og:title" content="Inline Editing of Status, Assignee &amp; Dates | GanttBoard">
+<meta property="og:description" content="Edit a Jira issue’s status, assignee, and dates directly in the GanttBoard table. Changes save straight back to Jira.">
+<meta property="og:image" content="https://getganttboard.com/assets/screenshots/05_edit.png">
+<meta property="og:url" content="https://getganttboard.com/features/inline-editing">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18198456393');
+</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+  gtag('event', 'conversion', { 'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD', 'value': 1.0, 'currency': 'EGP', 'event_callback': callback });
+  return false;
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="marketplace.atlassian.com"]').forEach(function(link) {
+    var url = link.href;
+    link.addEventListener('click', function(e) { e.preventDefault(); gtag_report_conversion(url); });
+  });
+});
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/features.html">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/docs.html">Docs</a>
+      <a href="/blog/jira-gantt-chart-free.html">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="article">
+  <p class="meta"><a href="/features.html">&larr; All features</a></p>
+  <h1>Inline editing (status, assignee, dates)</h1>
+  <img src="/assets/screenshots/05_edit.png" alt="Editing a status cell inline in the GanttBoard table" loading="lazy" style="width:100%;border:1px solid var(--border,#dfe1e6);border-radius:8px;margin:16px 0;">
+<p>The spreadsheet table on the left of the split view is fully editable. Double-click a <strong>status</strong> cell to transition the issue through its real Jira workflow, a <strong>assignee</strong> cell to reassign, or a <strong>date</strong> cell to set start and due dates. Every edit writes back to Jira immediately &mdash; no separate sync step.</p>
+  <ul>
+    <li>Status options come from your actual Jira workflow.</li>
+    <li>Assignee picker pulls the same users Jira does.</li>
+    <li>Filling in missing dates makes the bar appear on the timeline instantly.</li>
+  </ul>
+<p><a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=feature&amp;utm_medium=cta&amp;utm_campaign=launch">Get GanttBoard free &rarr;</a></p>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.25.0</div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
+      <a href="mailto:dev@getganttboard.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
+</body>
+</html>

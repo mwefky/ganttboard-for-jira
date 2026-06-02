@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Critical Path (CPM) for Jira | GanttBoard</title>
+<meta name="description" content="Turn on critical path to highlight the longest dependency chain in your Jira project — the tasks where any slip pushes your deadline.">
+<link rel="canonical" href="https://getganttboard.com/features/critical-path">
+<link rel="icon" type="image/png" href="/assets/logo-144.png">
+<meta property="og:title" content="Critical Path (CPM) for Jira | GanttBoard">
+<meta property="og:description" content="Turn on critical path to highlight the longest dependency chain in your Jira project — the tasks where any slip pushes your deadline.">
+<meta property="og:image" content="https://getganttboard.com/assets/screenshots/06_cp_baseline.png">
+<meta property="og:url" content="https://getganttboard.com/features/critical-path">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18198456393');
+</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+  gtag('event', 'conversion', { 'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD', 'value': 1.0, 'currency': 'EGP', 'event_callback': callback });
+  return false;
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="marketplace.atlassian.com"]').forEach(function(link) {
+    var url = link.href;
+    link.addEventListener('click', function(e) { e.preventDefault(); gtag_report_conversion(url); });
+  });
+});
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/features.html">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/docs.html">Docs</a>
+      <a href="/blog/jira-gantt-chart-free.html">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="article">
+  <p class="meta"><a href="/features.html">&larr; All features</a></p>
+  <h1>Critical path (CPM)</h1>
+  <img src="/assets/screenshots/06_cp_baseline.png" alt="Critical path highlighted across linked task bars" loading="lazy" style="width:100%;border:1px solid var(--border,#dfe1e6);border-radius:8px;margin:16px 0;">
+<p>Once your tasks are linked, toggle <strong>Critical path</strong> from the toolbar and GanttBoard highlights the longest chain through your project &mdash; the set of tasks where any delay pushes the end date. This is the classic Critical Path Method, the same result MS Project or Primavera would produce, applied directly to your Jira issues.</p>
+  <ul>
+    <li>One-click toggle in the toolbar.</li>
+    <li>Updates instantly as you add or change <a href="/features/task-dependencies.html">dependencies</a>.</li>
+    <li>See at a glance which work is schedule-critical.</li>
+  </ul>
+<p><a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=feature&amp;utm_medium=cta&amp;utm_campaign=launch">Get GanttBoard free &rarr;</a></p>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.25.0</div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
+      <a href="mailto:dev@getganttboard.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
+</body>
+</html>

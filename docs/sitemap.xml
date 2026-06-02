@@ -35,4 +35,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url><loc>https://getganttboard.com/features/gantt-timeline.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/task-dependencies.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/critical-path.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/baselines.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/auto-scheduling.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/inline-editing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/standup-mode.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/sprint-view.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/saved-views-filters.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/color-rules.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/working-days-calendar.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://getganttboard.com/features/export.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
