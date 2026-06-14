@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Show a Critical Path in Jira (Free) — GanttBoard</title>
+<meta name="description" content="Jira has no built-in critical path. Here is how to add critical path (CPM) to Jira Cloud for free: link your issues, turn on the critical path, and read it to protect your deadline.">
+<link rel="canonical" href="https://getganttboard.com/blog/jira-critical-path">
+<link rel="icon" type="image/png" href="/assets/logo-144.png">
+<meta property="og:title" content="How to Show a Critical Path in Jira (Free) — GanttBoard">
+<meta property="og:description" content="Jira has no built-in critical path. Here is how to add critical path (CPM) to Jira Cloud for free: link your issues, turn on the critical path, and read it to protect your deadline.">
+<meta property="og:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
+<meta property="og:url" content="https://getganttboard.com/blog/jira-critical-path">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18198456393');
+</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+  gtag('event', 'conversion', { 'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD', 'value': 1.0, 'currency': 'EGP', 'event_callback': callback });
+  return false;
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="marketplace.atlassian.com"]').forEach(function(link) {
+    var url = link.href;
+    link.addEventListener('click', function(e) { e.preventDefault(); gtag_report_conversion(url); });
+  });
+});
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/features.html">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/docs.html">Docs</a>
+      <a href="/blog/">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="article">
+  <p class="meta"><a href="/blog/">&larr; All posts</a> &middot; June 14, 2026 &middot; 5 minute read</p>
+  <h1>How to show a critical path in Jira (free)</h1>
+  <p>Jira does not ship a critical path. The built-in board and Basic Roadmap show issues and a loose timeline, but neither calculates the <strong>critical path</strong> &mdash; the chain of tasks where any slip pushes your deadline. The good news: you can add it to Jira Cloud for free in a couple of minutes. Here's how, and how to actually use it.</p>
+
+  <h2>What the critical path is (and why it matters)</h2>
+  <p>The critical path is the <strong>longest sequence of dependent tasks</strong> through your project. Its length sets your earliest possible finish date. Tasks on the critical path have zero slack: if one runs late, the whole project runs late. Tasks <em>off</em> the critical path have float &mdash; they can slip a little without moving the deadline. Knowing which is which tells you exactly where to focus when things get tight. This is the classic Critical Path Method (CPM), the same idea behind MS Project and Primavera.</p>
+
+  <h2>Why Jira doesn't have it natively</h2>
+  <p>Jira is built around the agile board, where commitments live at the sprint level rather than on a dependency-linked timeline. A critical path needs <strong>dated tasks with dependencies between them</strong> &mdash; a Gantt model Jira doesn't provide out of the box. That's why critical path lives in Marketplace Gantt apps.</p>
+
+  <h2>How to add a critical path to Jira (step by step)</h2>
+  <ol>
+    <li><strong>Install a free Gantt app with CPM.</strong> Open the <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=blog&amp;utm_medium=critical-path-step&amp;utm_campaign=launch">GanttBoard listing</a> and click <em>Get it now</em> (you need Jira admin). It's a Forge app, so nothing leaves your tenant.</li>
+    <li><strong>Open a project &rarr; the GanttBoard tab.</strong> Issues with start and due dates appear on the timeline immediately.</li>
+    <li><strong>Link your tasks.</strong> Hover a bar, grab one of the two dots, and drag to a dot on another bar to create a dependency. <a href="/features/task-dependencies.html">All four types</a> (FS, SS, FF, SF) are supported, with lag.</li>
+    <li><strong>Turn on Critical path.</strong> Click the <strong>Critical path</strong> button in the toolbar. GanttBoard highlights the longest dependency chain automatically.</li>
+  </ol>
+
+  <h2>How to read it</h2>
+  <p>Once it's on, the highlighted bars are your schedule-critical work &mdash; protect those dates first. If you want to know how a slip ripples through the plan, use <a href="/features/auto-scheduling.html">auto-scheduling</a> to cascade dates along the dependencies. And to track whether you're drifting from the original plan, save a <a href="/features/baselines.html">baseline</a> and compare. For the full walkthrough see the <a href="/features/critical-path.html">critical path feature page</a>, or our <a href="/blog/jira-gantt-chart-free.html">2-minute Gantt setup guide</a>.</p>
+
+  <h2>The short version</h2>
+  <p>Jira has no critical path on its own, but adding one is free and fast: install a Forge Gantt app, link your tasks, and toggle the critical path. Five minutes from "I wish Jira showed this" to "I can see exactly what's protecting my deadline."</p>
+<p><a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=blog&amp;utm_medium=jira-critical-path&amp;utm_campaign=launch">Get GanttBoard free &rarr;</a></p>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.27.0</div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
+      <a href="mailto:dev@getganttboard.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){ var open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+  })();
+</script>
+</body>
+</html>

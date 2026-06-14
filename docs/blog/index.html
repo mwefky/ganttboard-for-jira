@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — GanttBoard for Jira</title>
+<meta name="description" content="Guides and comparisons on Gantt charts, critical path, dependencies, and capacity planning for Jira Cloud.">
+<link rel="canonical" href="https://getganttboard.com/blog/">
+<link rel="icon" type="image/png" href="/assets/logo-144.png">
+<meta property="og:title" content="Blog — GanttBoard for Jira">
+<meta property="og:description" content="Guides and comparisons on Jira Gantt charts, critical path, dependencies, and capacity planning.">
+<meta property="og:url" content="https://getganttboard.com/blog/">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .feature-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin:24px 0;}
+  .feature-card{display:block;padding:18px;border:1px solid var(--border,#dfe1e6);border-radius:8px;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s;background:#fff;}
+  .feature-card:hover{box-shadow:0 6px 18px rgba(9,30,66,.12);transform:translateY(-2px);}
+  .feature-card h3{margin:0 0 6px;font-size:16px;color:#0052CC;line-height:1.35;}
+  .feature-card p{margin:0;color:#6B778C;font-size:14px;line-height:1.45;}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18198456393');
+</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+  gtag('event', 'conversion', { 'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD', 'value': 1.0, 'currency': 'EGP', 'event_callback': callback });
+  return false;
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="marketplace.atlassian.com"]').forEach(function(link) {
+    var url = link.href;
+    link.addEventListener('click', function(e) { e.preventDefault(); gtag_report_conversion(url); });
+  });
+});
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/features.html">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/docs.html">Docs</a>
+      <a href="/blog/">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="article">
+  <h1>The GanttBoard blog</h1>
+  <p>Practical guides and honest comparisons for planning projects in Jira Cloud &mdash; Gantt charts, dependencies, critical path, baselines, and capacity planning.</p>
+  <div class="feature-grid">
+      <a class="feature-card" href="/blog/jira-resource-capacity-planning.html">
+        <p style="margin:0 0 4px;font-size:11px;color:#6B778C;">Jun 15, 2026</p>
+        <h3>Resource &amp; capacity planning in Jira</h3>
+        <p>See who’s over capacity this week — free, no BigPicture required.</p>
+      </a>
+      <a class="feature-card" href="/blog/jira-critical-path.html">
+        <p style="margin:0 0 4px;font-size:11px;color:#6B778C;">Jun 14, 2026</p>
+        <h3>How to show a critical path in Jira</h3>
+        <p>Jira has no built-in CPM. Add it free: link issues, toggle critical path, protect your deadline.</p>
+      </a>
+      <a class="feature-card" href="/blog/structure-gantt-alternative.html">
+        <p style="margin:0 0 4px;font-size:11px;color:#6B778C;">Jun 13, 2026</p>
+        <h3>Structure.Gantt alternative for Jira</h3>
+        <p>Structure.Gantt vs a free, Forge-native Gantt — pricing, features, and when to pick which.</p>
+      </a>
+      <a class="feature-card" href="/blog/biggantt-comparison.html">
+        <p style="margin:0 0 4px;font-size:11px;color:#6B778C;">Jun 2, 2026</p>
+        <h3>BigGantt alternative for Jira</h3>
+        <p>An honest BigGantt vs GanttBoard comparison — pricing, features, data residency.</p>
+      </a>
+      <a class="feature-card" href="/blog/jira-gantt-chart-free.html">
+        <p style="margin:0 0 4px;font-size:11px;color:#6B778C;">Apr 23, 2026</p>
+        <h3>Gantt chart for Jira, free: a 2-minute install guide</h3>
+        <p>How to add a free Gantt chart to Jira Cloud in about two minutes.</p>
+      </a>
+  </div>
+<p><a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=blog&amp;utm_medium=blog-index&amp;utm_campaign=launch">Get GanttBoard free &rarr;</a></p>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.27.0</div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
+      <a href="mailto:dev@getganttboard.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){ var open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+  })();
+</script>
+</body>
+</html>

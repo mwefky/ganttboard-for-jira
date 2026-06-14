@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resource &amp; Capacity Planning in Jira, Free — GanttBoard</title>
+<meta name="description" content="See who is over capacity in Jira without paying for BigPicture. A free, Runs-on-Atlassian way to view each assignee’s workload and spot overallocation this week.">
+<link rel="canonical" href="https://getganttboard.com/blog/jira-resource-capacity-planning">
+<link rel="icon" type="image/png" href="/assets/logo-144.png">
+<meta property="og:title" content="Resource &amp; Capacity Planning in Jira, Free — GanttBoard">
+<meta property="og:description" content="See who is over capacity in Jira without paying for BigPicture. A free, Runs-on-Atlassian way to view each assignee’s workload and spot overallocation this week.">
+<meta property="og:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
+<meta property="og:url" content="https://getganttboard.com/blog/jira-resource-capacity-planning">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18198456393');
+</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+  gtag('event', 'conversion', { 'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD', 'value': 1.0, 'currency': 'EGP', 'event_callback': callback });
+  return false;
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="marketplace.atlassian.com"]').forEach(function(link) {
+    var url = link.href;
+    link.addEventListener('click', function(e) { e.preventDefault(); gtag_report_conversion(url); });
+  });
+});
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/features.html">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/docs.html">Docs</a>
+      <a href="/blog/">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="article">
+  <p class="meta"><a href="/blog/">&larr; All posts</a> &middot; June 15, 2026 &middot; 6 minute read</p>
+  <h1>Resource &amp; capacity planning in Jira, free</h1>
+  <p>Jira tells you <em>who</em> a task is assigned to. It does not tell you whether that person is <strong>overloaded</strong>. You can have one teammate buried under five overlapping tasks while another sits idle, and nothing on the board flags it &mdash; until standup, or until a deadline slips. Resource and capacity planning closes that gap, and you don't need an enterprise suite to get the essentials.</p>
+
+  <h2>The problem with capacity in plain Jira</h2>
+  <p>Assignees are a field, not a workload model. To know if someone is over capacity, you have to mentally sum every task assigned to them across overlapping dates and compare it to the days they actually work that week. Nobody does that reliably by hand, so overallocation stays invisible until it bites.</p>
+
+  <h2>The heavy options</h2>
+  <p>The enterprise answer is a full resource module &mdash; <strong>BigPicture</strong>, or the resource features in Structure.Gantt &mdash; with capacity histograms, allocation percentages, and team-level planning. They're powerful and priced accordingly, and they're more than most teams need just to answer "who's drowning this week?"</p>
+
+  <h2>The lean, free way</h2>
+  <p><strong>GanttBoard for Jira</strong> ships a focused <strong>Capacity view</strong> (Velocity Mode) that answers exactly that question, free:</p>
+  <ul>
+    <li>A one-line banner at the top: <strong>who is over capacity this week, and on which days</strong>.</li>
+    <li>Each assignee's workload across the timeline, color-coded &mdash; green when they're fine, amber near capacity, red when overloaded.</li>
+    <li>Click a person to see the <strong>exact tasks driving their load</strong>, so you can reassign or reschedule to rebalance &mdash; and each task opens straight in Jira.</li>
+  </ul>
+  <p>It reads your existing Jira assignees and dates, respects your <a href="/features/working-days-calendar.html">working days and holidays</a>, and needs no setup. To open it, click <strong>Capacity</strong> in the GanttBoard toolbar.</p>
+
+  <h2>How to use it day to day</h2>
+  <ol>
+    <li>Open <strong>Capacity</strong> on Monday. If the banner is green, you're balanced. If it's red, it names who's over and when.</li>
+    <li>Click an overloaded person to see their tasks for the window.</li>
+    <li>Drag a task to a different date, or reassign it, until the banner goes green.</li>
+  </ol>
+
+  <h2>What it is &mdash; and isn't</h2>
+  <p>This is deliberately the <strong>lean</strong> version: it surfaces overallocation and lets you rebalance fast. It is not a full capacity-planning suite with allocation percentages, cost, or cross-program portfolio views &mdash; if you need those, BigPicture is the category leader. But for a small Jira team that just wants to stop people quietly drowning, the free Capacity view covers the 80% that actually matters. See the <a href="/features.html">features</a>, or compare with <a href="/blog/biggantt-comparison.html">BigGantt</a> and <a href="/blog/structure-gantt-alternative.html">Structure.Gantt</a>.</p>
+<p><a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=blog&amp;utm_medium=jira-resource-capacity-planning&amp;utm_campaign=launch">Get GanttBoard free &rarr;</a></p>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.27.0</div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
+      <a href="mailto:dev@getganttboard.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){ var open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+  })();
+</script>
+</body>
+</html>
