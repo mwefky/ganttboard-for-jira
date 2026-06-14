@@ -27,6 +27,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18198456393');
+  gtag('config', 'G-1PR499WHPR');
 </script>
 <!-- Google Ads conversion handler (Google-official) -->
 <script>
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var url = link.href;
     link.addEventListener('click', function(e) {
       e.preventDefault();
-      gtag_report_conversion(url);
+      gtag('event', 'marketplace_click', { event_category: 'outbound', event_label: url, transport_type: 'beacon' }); gtag_report_conversion(url);
     });
   });
 });
