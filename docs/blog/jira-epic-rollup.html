@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Roll Up Epic Dates &amp; Progress in Jira (Free) — GanttBoard</title>
+<meta name="description" content="Jira epics don't auto-update from their children. Here's how to roll up epic start/due dates and % complete from stories and sub-tasks in Jira Cloud for free — automatically, and bottom-up through every level.">
+<link rel="canonical" href="https://getganttboard.com/blog/jira-epic-rollup">
+<link rel="icon" type="image/png" href="/assets/logo-144.png">
+<meta property="og:title" content="How to Roll Up Epic Dates &amp; Progress in Jira (Free) — GanttBoard">
+<meta property="og:description" content="Roll up epic start/due dates and % complete from stories and sub-tasks in Jira Cloud — automatically, free, bottom-up through every level.">
+<meta property="og:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
+<meta property="og:url" content="https://getganttboard.com/blog/jira-epic-rollup">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18198456393');
+  gtag('config', 'G-1PR499WHPR');
+</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+  gtag('event', 'conversion', { 'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD', 'value': 1.0, 'currency': 'EGP', 'event_callback': callback });
+  return false;
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="marketplace.atlassian.com"]').forEach(function(link) {
+    var url = link.href;
+    link.addEventListener('click', function(e) { e.preventDefault(); gtag('event', 'marketplace_click', { event_category: 'outbound', event_label: url, transport_type: 'beacon' }); gtag_report_conversion(url); });
+  });
+});
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/features.html">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/docs.html">Docs</a>
+      <a href="/blog/">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="article">
+  <p class="meta"><a href="/blog/">&larr; All posts</a> &middot; June 19, 2026 &middot; 5 minute read</p>
+  <h1>How to roll up epic dates &amp; progress in Jira (free)</h1>
+  <p>Here's a problem every Jira project manager knows: you set an epic to finish at the end of the month, the stories underneath it slip a fortnight, and the epic's due date <em>doesn't move</em>. Report off the epic and you're reporting fiction &mdash; the parent and its children have quietly drifted apart. This guide shows how to <strong>roll up epic dates and percent-complete from the work underneath</strong>, automatically, in Jira Cloud, for free.</p>
+
+  <h2>What "rollup" means</h2>
+  <p>Rollup is when a parent issue's schedule is <strong>derived from its children</strong> instead of typed in by hand:</p>
+  <ul>
+    <li><strong>Start date</strong> = the earliest start of any child.</li>
+    <li><strong>Due date</strong> = the latest end of any child.</li>
+    <li><strong>% complete</strong> = the progress of the children, weighted by how long each one is (a three-week story should count for more than a one-day chore).</li>
+  </ul>
+  <p>Done properly it's <strong>bottom-up</strong>: sub-tasks roll into their story, stories roll into their epic. Each level reflects everything beneath it, so the top of your plan is always honest.</p>
+
+  <h2>Why Jira doesn't do this on its own</h2>
+  <p>In native Jira, an epic's start and due dates are just fields &mdash; nobody recalculates them when a child moves. Jira Premium's Advanced Roadmaps can roll dates up, but it's a heavy, Premium-tier tool if all you actually want is parent dates that stay in sync. For most teams the gap is filled by a Marketplace Gantt app that treats the parent bar as a <em>summary</em> of its children.</p>
+
+  <h2>How to roll up epics in Jira (step by step)</h2>
+  <ol>
+    <li><strong>Install a free Gantt app with rollup.</strong> Open the <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=blog&amp;utm_medium=epic-rollup-step&amp;utm_campaign=launch">GanttBoard listing</a> and click <em>Get it now</em> (you need Jira admin). It's a Forge app, so your project data never leaves your Atlassian tenant.</li>
+    <li><strong>Open a project &rarr; the GanttBoard tab.</strong> Your epics, stories and sub-tasks appear on the <a href="/features/gantt-timeline.html">timeline</a> in their natural hierarchy.</li>
+    <li><strong>Nothing to configure.</strong> Every parent with children automatically draws a slim <strong>summary bar</strong> spanning its earliest child's start to its latest child's end, with a duration-weighted % complete shown above it.</li>
+    <li><strong>Drag the work underneath.</strong> Reschedule or resize a child and the parent bar reshapes itself instantly. Summary bars are <strong>read-only</strong> on purpose &mdash; they reflect the children, so a derived date can never overwrite the real issue dates in Jira.</li>
+  </ol>
+
+  <h2>How to read a summary bar</h2>
+  <p>The summary bar tells you, at a glance, the true span and health of an epic. A short progress fill on a bar that stretches well past today is your early warning that an epic is behind &mdash; long before anyone opens the individual stories. Pair it with <a href="/blog/jira-critical-path.html">critical-path highlighting</a> to see <em>which</em> child is dragging the date, and a <a href="/features/baselines.html">baseline</a> to see how far the epic has drifted from the original plan.</p>
+
+  <h2>A worked example</h2>
+  <p>Say an epic has three stories: a 2-day spike (100% done), a 10-day build (50% done) and a 4-day test pass (0% done). Hand-typed, the epic might still say "due last Friday." Rolled up, the epic now spans from the spike's start to the test's end, and its progress is the duration-weighted average &mdash; roughly 39%, not the 50% you'd get from a naive "average of the three." That weighting is what keeps the number trustworthy when child durations differ.</p>
+
+  <h2>The short version</h2>
+  <p>Jira won't keep epic dates and progress in sync with the work inside them &mdash; but adding automatic rollup is free and takes no setup: install a Forge Gantt app, open your project, and every parent becomes a live summary of its children. From "the epic said we were fine" to a timeline you can actually report off.</p>
+<p><a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=blog&amp;utm_medium=jira-epic-rollup&amp;utm_campaign=launch">Get GanttBoard free &rarr;</a></p>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.29.0</div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
+      <a href="mailto:dev@getganttboard.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){ var open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Export a Jira Gantt Chart (MS Project, PDF, CSV, PNG) — GanttBoard</title>
+<meta name="description" content="Jira can't export a Gantt chart on its own. Here's how to export a Jira timeline to MS Project XML, PDF, CSV or PNG for free — tasks and dependencies included — straight from the toolbar.">
+<link rel="canonical" href="https://getganttboard.com/blog/export-jira-gantt-chart">
+<link rel="icon" type="image/png" href="/assets/logo-144.png">
+<meta property="og:title" content="How to Export a Jira Gantt Chart (MS Project, PDF, CSV, PNG) — GanttBoard">
+<meta property="og:description" content="Export a Jira timeline to MS Project XML, PDF, CSV or PNG for free — tasks and dependencies included — straight from the toolbar.">
+<meta property="og:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
+<meta property="og:url" content="https://getganttboard.com/blog/export-jira-gantt-chart">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18198456393');
+  gtag('config', 'G-1PR499WHPR');
+</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+  gtag('event', 'conversion', { 'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD', 'value': 1.0, 'currency': 'EGP', 'event_callback': callback });
+  return false;
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="marketplace.atlassian.com"]').forEach(function(link) {
+    var url = link.href;
+    link.addEventListener('click', function(e) { e.preventDefault(); gtag('event', 'marketplace_click', { event_category: 'outbound', event_label: url, transport_type: 'beacon' }); gtag_report_conversion(url); });
+  });
+});
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/features.html">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/docs.html">Docs</a>
+      <a href="/blog/">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="article">
+  <p class="meta"><a href="/blog/">&larr; All posts</a> &middot; June 19, 2026 &middot; 4 minute read</p>
+  <h1>How to export a Jira Gantt chart (MS Project, PDF, CSV, PNG)</h1>
+  <p>Sooner or later someone outside Jira wants your plan: a sponsor wants a PDF for the steering deck, a planner lives in MS Project, finance wants a CSV. Jira itself doesn't export a Gantt chart &mdash; there's no timeline to export in the first place. Here's how to get a Jira project out in <strong>four portable formats</strong>, for free, with dependencies intact.</p>
+
+  <h2>The four formats and when to use each</h2>
+  <ul>
+    <li><strong>PNG</strong> &mdash; a crisp image of the timeline. Drop it straight into a slide, a wiki page or an email.</li>
+    <li><strong>PDF</strong> &mdash; a print-ready status report. Best for stakeholder updates and sign-offs.</li>
+    <li><strong>CSV</strong> &mdash; key, summary, type, status, assignee, start, end, duration, progress and parent. Best for spreadsheets, pivot tables and finance.</li>
+    <li><strong>MS Project XML</strong> &mdash; tasks <em>and</em> the dependencies between them, ready to open in Microsoft Project or any tool that reads Project XML. Best when a PMO or external planner needs the real schedule, not a picture of it.</li>
+  </ul>
+
+  <h2>Why you can't do this in native Jira</h2>
+  <p>Native Jira has no dated, dependency-linked timeline to export &mdash; the board and Basic Roadmap don't model a Gantt. So the export has to come from the same Marketplace app that draws the <a href="/features/gantt-timeline.html">Gantt timeline</a> in the first place. The advantage: because the app already knows your start/end dates, <a href="/features/task-dependencies.html">dependencies</a> and hierarchy, it can export all of that &mdash; not just a flat issue list.</p>
+
+  <h2>How to export your Jira Gantt (step by step)</h2>
+  <ol>
+    <li><strong>Install a free Gantt app.</strong> Open the <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=blog&amp;utm_medium=export-step&amp;utm_campaign=launch">GanttBoard listing</a> and click <em>Get it now</em> (Jira admin required). It's a Forge app &mdash; your data stays in your tenant, including when you export.</li>
+    <li><strong>Open your project &rarr; the GanttBoard tab.</strong> Arrange the view the way you want it exported &mdash; any <a href="/features/saved-views-filters.html">filters you've applied are respected</a>, so you can export just one sprint, one epic or one assignee.</li>
+    <li><strong>Open the toolbar's &ldquo;&hellip;&rdquo; menu.</strong> Pick <em>Export as PNG</em>, <em>CSV</em>, <em>PDF</em>, or <em>Export to MS Project</em>. The file downloads to your machine.</li>
+  </ol>
+
+  <h2>Tips</h2>
+  <p>For a sponsor update, export a PDF after turning on <a href="/blog/jira-critical-path.html">critical-path highlighting</a> so the at-risk chain is obvious in the report. For a portfolio handover, use MS Project XML so the receiving tool keeps your dependencies. And because <a href="/blog/jira-epic-rollup.html">epics roll up automatically</a>, the exported parents already show the correct rolled-up span &mdash; no manual cleanup before you send it.</p>
+
+  <h2>The short version</h2>
+  <p>Jira can't export a Gantt because it doesn't build one &mdash; but a free Forge Gantt app does, and it exports to PNG, PDF, CSV and MS Project XML straight from the toolbar, dependencies included. Two minutes from "can you send me the plan?" to a file in their inbox.</p>
+<p><a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=blog&amp;utm_medium=export-jira-gantt&amp;utm_campaign=launch">Get GanttBoard free &rarr;</a></p>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.29.0</div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mwefky/ganttboard-for-jira/blob/main/EULA.md">EULA</a>
+      <a href="mailto:dev@getganttboard.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){ var open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+  })();
+</script>
+</body>
+</html>
