@@ -3,7 +3,7 @@
 **Last updated:** April 23, 2026
 **App name:** GanttBoard for Jira
 **Platform:** Atlassian Forge (Jira Cloud)
-**Publisher:** Mina Wefky
+**Publisher:** GanttBoard
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Effective date:** April 23, 2026
 **App:** GanttBoard for Jira
-**Publisher:** Mina Wefky ("Publisher")
+**Publisher:** GanttBoard ("Publisher")
 
 This End User License Agreement ("EULA") is a legal agreement between you (either an individual or a single legal entity, "You") and the Publisher governing Your use of the GanttBoard for Jira software application ("the App") distributed via the Atlassian Marketplace.
 
