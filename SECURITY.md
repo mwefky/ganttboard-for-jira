@@ -23,9 +23,7 @@ The latest version deployed to the Atlassian Marketplace is the only supported v
 If you discover a security vulnerability in GanttBoard for Jira, please report it **privately** — do not open a public GitHub issue.
 
 ### How to report
-- **Preferred:** Open a private security advisory on GitHub:
-  https://github.com/mwefky/ganttboard-for-jira/security/advisories/new
-- **Alternative:** Email the publisher at dev@getganttboard.com with subject `[SECURITY] GanttBoard for Jira`
+- **Email** dev@getganttboard.com with the subject `[SECURITY] GanttBoard for Jira`. Please report privately and do not disclose the issue publicly until it has been resolved.
 
 ### What to include
 - A description of the vulnerability
@@ -57,7 +55,7 @@ If you discover a security vulnerability in GanttBoard for Jira, please report i
 - No third-party SDKs, analytics, or tracking
 - No secrets stored in code or configuration (Forge handles auth)
 - Input validation on all user-provided data (JQL, dates, names)
-- Dependencies monitored via GitHub Dependabot
+- Dependencies monitored with automated scanning
 
 ### Permission Model
 The App requests the minimum scopes needed:
@@ -98,7 +96,7 @@ No admin-level scopes, no organization-wide scopes, no other products' scopes.
 - TypeScript strict mode for type safety
 - Code review required for all changes before release
 - All dependencies pinned in `package.json`
-- Automated dependency scanning (Dependabot)
+- Automated dependency scanning
 
 ### Deployment
 - Staged releases: dev → staging → production via Forge environments
@@ -122,7 +120,7 @@ No admin-level scopes, no organization-wide scopes, no other products' scopes.
 
 ## Contact
 
-- **Security reports:** https://github.com/mwefky/ganttboard-for-jira/security/advisories/new
-- **General support:** https://github.com/mwefky/ganttboard-for-jira/issues
+- **Security reports:** dev@getganttboard.com (subject `[SECURITY] GanttBoard for Jira`)
+- **General support:** dev@getganttboard.com
 - **Email:** dev@getganttboard.com
 - **Atlassian Marketplace listing:** https://marketplace.atlassian.com/apps/ganttboard-for-jira

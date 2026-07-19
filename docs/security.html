@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Policy — GanttBoard for Jira</title>
+<meta name="description" content="Security policy for GanttBoard for Jira: a native Atlassian Forge app with no external network calls, user-scoped access, encryption in transit and at rest, and responsible disclosure.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://getganttboard.com/security.html">
+<link rel="icon" type="image/png" href="/assets/logo-144.png">
+<meta property="og:title" content="Security Policy — GanttBoard for Jira">
+<meta property="og:description" content="Native Atlassian Forge app: no external network calls, user-scoped access, encrypted in transit and at rest, responsible disclosure.">
+<meta property="og:url" content="https://getganttboard.com/security.html">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/assets/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18198456393');
+  gtag('config', 'G-1PR499WHPR');
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="GanttBoard for Jira home">
+      <img src="/assets/logo-144.png" alt="GanttBoard logo">
+      <span>GanttBoard for Jira</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/features.html">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/docs.html">Docs</a>
+      <a href="/blog/">Blog</a>
+      <a class="btn btn-primary" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=nav&amp;utm_campaign=launch">Get it free</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Security Policy</h1>
+      <p class="lead">GanttBoard for Jira is a native Atlassian Forge app: no external network calls, user-scoped access, and encryption in transit and at rest.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="legal" style="max-width: 820px; margin: 0 auto;">
+        <p><strong>App name:</strong> GanttBoard for Jira<br>
+        <strong>Platform:</strong> Atlassian Forge (Jira Cloud)<br>
+        <strong>Runtime:</strong> Node.js 22.x (managed by Atlassian)<br>
+        <strong>Last updated:</strong> April 23, 2026</p>
+
+        <h2>Supported Versions</h2>
+        <p>The latest version deployed to the Atlassian Marketplace is the only supported version. Because the App runs on Atlassian Forge, updates are pushed to all customers automatically on the next page load.</p>
+        <div class="table-wrap">
+          <table class="compare">
+            <thead><tr><th>Version</th><th>Supported</th></tr></thead>
+            <tbody>
+              <tr><td>Latest (Marketplace)</td><td class="yes">Yes</td></tr>
+              <tr><td>Older versions</td><td>No — auto-upgraded by Forge</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Reporting a Vulnerability</h2>
+        <p>If you discover a security vulnerability in GanttBoard for Jira, please report it <strong>privately</strong> by email &mdash; do not disclose it publicly until it has been resolved.</p>
+        <h3>How to report</h3>
+        <p>Email <a href="mailto:dev@getganttboard.com?subject=%5BSECURITY%5D%20GanttBoard%20for%20Jira">dev@getganttboard.com</a> with the subject <code>[SECURITY] GanttBoard for Jira</code>.</p>
+        <h3>What to include</h3>
+        <ul>
+          <li>A description of the vulnerability</li>
+          <li>Steps to reproduce (if possible)</li>
+          <li>The version of the App (or the date of the Marketplace listing you tested)</li>
+          <li>Your contact info for follow-up</li>
+        </ul>
+        <h3>What to expect</h3>
+        <ul>
+          <li><strong>Acknowledgment</strong> within 3 business days</li>
+          <li><strong>Initial assessment</strong> within 7 business days</li>
+          <li><strong>Fix + redeployment</strong> within 14 business days for critical issues</li>
+          <li><strong>Credit</strong> in the Marketplace release notes if you want it (or kept anonymous if you prefer)</li>
+        </ul>
+
+        <h2>Security Architecture</h2>
+        <h3>Platform Security (handled by Atlassian)</h3>
+        <ul>
+          <li>Runtime sandboxing (Forge function isolation)</li>
+          <li>HTTPS/TLS on all network traffic</li>
+          <li>Encryption at rest for Forge KVS storage</li>
+          <li>Authentication via Atlassian Cloud (OAuth 2.0)</li>
+          <li>Node.js security patching (managed by Atlassian)</li>
+          <li>DDoS protection and rate limiting (Atlassian infrastructure)</li>
+        </ul>
+        <h3>App-Level Security</h3>
+        <ul>
+          <li>All Jira API calls use <code>api.asUser()</code> &mdash; no privilege escalation</li>
+          <li>No external network calls (backend restricted to <code>*.atlassian.net</code>)</li>
+          <li>No third-party SDKs, analytics, or tracking</li>
+          <li>No secrets stored in code or configuration (Forge handles auth)</li>
+          <li>Input validation on all user-provided data (JQL, dates, names)</li>
+          <li>Dependencies monitored with automated scanning</li>
+        </ul>
+        <h3>Permission Model</h3>
+        <p>The App requests the minimum scopes needed:</p>
+        <div class="table-wrap">
+          <table class="compare">
+            <thead><tr><th>Scope</th><th>Purpose</th></tr></thead>
+            <tbody>
+              <tr><td><code>read:jira-work</code></td><td>Read issues, projects, fields</td></tr>
+              <tr><td><code>write:jira-work</code></td><td>Update dates, links, status, assignee</td></tr>
+              <tr><td><code>read:jira-user</code></td><td>Assignee dropdown population</td></tr>
+              <tr><td><code>storage:app</code></td><td>Store baselines, views, settings</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>No admin-level scopes, no organization-wide scopes, no other products' scopes.</p>
+
+        <h2>Threat Model</h2>
+        <h3>In-scope for security reporting</h3>
+        <ul>
+          <li>Privilege escalation (accessing issues the user shouldn't see)</li>
+          <li>Data leaks (sending Jira data to external parties)</li>
+          <li>XSS in the Gantt UI</li>
+          <li>Injection attacks (JQL, date fields, names)</li>
+          <li>Broken authentication or authorization</li>
+          <li>Insecure direct object references (IDOR) in Forge resolvers</li>
+        </ul>
+        <h3>Out-of-scope</h3>
+        <ul>
+          <li>Denial-of-service attacks (handled by Atlassian infrastructure)</li>
+          <li>Vulnerabilities in Atlassian Forge itself (report to Atlassian)</li>
+          <li>Vulnerabilities in Jira Cloud itself (report to Atlassian)</li>
+          <li>Social-engineering attacks against users</li>
+          <li>Physical attacks on Atlassian data centers</li>
+        </ul>
+
+        <h2>Security Practices</h2>
+        <h3>Development</h3>
+        <ul>
+          <li>TypeScript strict mode for type safety</li>
+          <li>Code review required for all changes before release</li>
+          <li>All dependencies pinned in <code>package.json</code></li>
+          <li>Automated dependency scanning</li>
+        </ul>
+        <h3>Deployment</h3>
+        <ul>
+          <li>Staged releases: development &rarr; production via Forge environments</li>
+          <li>Only the Forge Marketplace deployment pipeline can publish updates</li>
+          <li>No direct database access &mdash; all storage through Forge KVS</li>
+        </ul>
+        <h3>Monitoring</h3>
+        <ul>
+          <li>Forge platform logs accessible via <code>forge logs --environment production</code></li>
+          <li>Atlassian provides error alerting for resolver failures</li>
+          <li>No telemetry sent to the publisher (zero data collection by design)</li>
+        </ul>
+
+        <h2>Disclosure Policy</h2>
+        <ul>
+          <li>Reporters will be kept informed throughout the triage and fix process</li>
+          <li>We will not pursue legal action against researchers who follow responsible disclosure</li>
+          <li>We request a reasonable disclosure window (typically 90 days or until a fix is deployed, whichever is sooner)</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <ul>
+          <li><strong>Security reports:</strong> <a href="mailto:dev@getganttboard.com?subject=%5BSECURITY%5D%20GanttBoard%20for%20Jira">dev@getganttboard.com</a> (subject <code>[SECURITY] GanttBoard for Jira</code>)</li>
+          <li><strong>General support:</strong> <a href="mailto:dev@getganttboard.com">dev@getganttboard.com</a></li>
+          <li><strong>Privacy policy:</strong> <a href="/privacy.html">getganttboard.com/privacy.html</a></li>
+          <li><strong>Marketplace listing:</strong> <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">GanttBoard for Jira on the Atlassian Marketplace</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>&copy; 2026 GanttBoard &middot; v3.36.0</div>
+    <nav aria-label="Footer">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/security.html">Security</a>
+      <a href="/eula.html">EULA</a>
+      <a href="mailto:dev@getganttboard.com">Support</a>
+      <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira">Marketplace</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
+</body>
+</html>
