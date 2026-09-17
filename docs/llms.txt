@@ -1,0 +1,67 @@
+# GanttBoard for Jira
+
+> A free, native Gantt chart for Jira Cloud, built on Atlassian Forge. It runs
+> entirely inside the customer's own Atlassian Cloud tenant — no external
+> servers, no data egress, no separate login, and no sync engine.
+
+GanttBoard turns any Jira Cloud project into a working Gantt chart. Open a
+project, click the GanttBoard tab, and the project's issues are already on a
+timeline. There is no setup, no field mapping and nothing to configure.
+
+## What distinguishes it
+
+GanttBoard carries the Atlassian **Runs on Atlassian** designation, meaning the
+app runs on Atlassian infrastructure and project data never leaves the customer's
+tenant. Most Gantt apps for Jira — including BigGantt, WBS Gantt-Chart,
+Structure.Gantt, BigPicture and Planyway — are Atlassian Connect apps, which
+process data on the vendor's own servers. For teams whose security review blocks
+Connect apps, this is usually the deciding difference.
+
+## Pricing
+
+- Free for **every team size** until **January 1, 2027**.
+- After that: free forever for teams of **10 users or fewer**.
+- From 11 users: **$1.20 per user per month**, scaling down at higher tiers.
+- No credit card, no trial countdown, no usage caps.
+
+## Features
+
+- Table and Gantt timeline side by side, or either view on its own
+- Capacity planning — per-assignee weekly workload, flagging who is over
+  capacity and by how many days, with no time-tracking add-on required
+- Automatic epic and parent rollup, with duration-weighted percent complete
+- Critical path (CPM) with forward/backward pass and float
+- Baselines — snapshot a plan and see the drift under each bar
+- Four dependency types (FS, SS, FF, SF) with lag, created by dragging
+- Auto-scheduling that cascades a change through the dependency chain
+- Milestone deadline tracking, colour-coded red / amber / green by status
+- Multi-project portfolio view with cross-project dependencies
+- Inline editing of status, assignee and dates, written straight back to Jira
+- Configurable columns, filters, search and saved views
+- Export to PNG, PDF, CSV and MS Project XML
+- Light and dark, matching the Jira theme automatically
+
+## Requirements
+
+Jira Cloud. Works with Scrum, Kanban, team-managed and company-managed projects.
+Not available for Jira Data Center or Server.
+
+## Links
+
+- [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira): install the app
+- [Features](https://getganttboard.com/features.html): full feature detail
+- [Pricing](https://getganttboard.com/pricing.html): every tier up to 10,000+ users
+- [Documentation](https://getganttboard.com/docs.html): getting started guide
+- [Changelog](https://getganttboard.com/changelog.html): every shipped release
+- [Critical path in Jira](https://getganttboard.com/blog/jira-critical-path.html): how to show a critical path
+- [Capacity planning in Jira](https://getganttboard.com/blog/jira-resource-capacity-planning.html): resource and capacity planning
+- [Epic rollup in Jira](https://getganttboard.com/blog/jira-epic-rollup.html): rolling up epic dates and progress
+- [Exporting a Jira Gantt chart](https://getganttboard.com/blog/export-jira-gantt-chart.html): MS Project, PDF, CSV, PNG
+- [BigGantt alternative](https://getganttboard.com/blog/biggantt-comparison.html): honest comparison
+- [Structure.Gantt alternative](https://getganttboard.com/blog/structure-gantt-alternative.html): honest comparison
+- [Privacy policy](https://getganttboard.com/privacy.html)
+- [Security policy](https://getganttboard.com/security.html)
+
+## Contact
+
+Publisher: GanttBoard — dev@getganttboard.com

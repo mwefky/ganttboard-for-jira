@@ -7,17 +7,17 @@
 <!-- TODO: change getganttboard.com domain in canonical/OG tags if hosting elsewhere -->
 <!-- TODO: add <meta name="google-site-verification" content="..."> and GA4 tag here -->
 <title>Free Gantt Charts for Jira — GanttBoard for Jira</title>
-<meta name="description" content="Native Forge app bringing Gantt charts, critical path, baselines and auto-scheduling to Jira Cloud. Free through October 1, 2026. From $1.20/user/month.">
+<meta name="description" content="Native Forge Gantt chart for Jira Cloud — capacity planning, critical path, epic rollup, baselines. Runs on Atlassian, so your project data never leaves your tenant. Free until January 1, 2027.">
 <link rel="canonical" href="https://getganttboard.com/">
 <link rel="icon" type="image/png" href="/assets/logo-144.png">
 <meta property="og:title" content="Free Gantt Charts for Jira — GanttBoard for Jira">
-<meta property="og:description" content="Native Forge app. Critical path, baselines, auto-scheduling. Free through October 1, 2026 — then from $1.20/user/month.">
+<meta property="og:description" content="Native Forge Gantt chart for Jira. Capacity, critical path, epic rollup, baselines — and your data never leaves your Atlassian tenant. Free until January 1, 2027.">
 <meta property="og:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
 <meta property="og:url" content="https://getganttboard.com/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free Gantt Charts for Jira — GanttBoard for Jira">
-<meta name="twitter:description" content="Native Forge app. Critical path, baselines, auto-scheduling. Free through October 1, 2026.">
+<meta name="twitter:description" content="Native Forge app. Critical path, baselines, auto-scheduling. Free through January 1, 2027.">
 <meta name="twitter:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
 <link rel="stylesheet" href="/assets/styles.css">
 <script type="application/ld+json">
@@ -27,7 +27,7 @@
   "name": "GanttBoard for Jira",
   "operatingSystem": "Atlassian Jira Cloud",
   "applicationCategory": "BusinessApplication",
-  "softwareVersion": "3.33.0",
+  "softwareVersion": "3.37.0",
   "description": "Native Forge Gantt chart app for Jira Cloud. Critical path, baselines, auto-scheduling, drag-to-create dependencies, standup mode.",
   "downloadUrl": "https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira",
   "url": "https://getganttboard.com/",
@@ -41,7 +41,7 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
-      "priceValidUntil": "2026-10-01",
+      "priceValidUntil": "2027-01-01",
       "availability": "https://schema.org/InStock",
       "url": "https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira"
     },
@@ -126,8 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
   <section class="hero">
     <div class="container">
       <span class="pill">New on the Atlassian Marketplace</span>
-      <h1>Free Gantt Charts for Jira &mdash; no 10-user cap, no time limit</h1>
-      <p class="lead">Native Forge app. Capacity planning, epic rollup, critical path, baselines, auto-scheduling. Free through October 1, 2026 &mdash; then from $1.20/user/month. Undercuts BigGantt, WBS, and GanttTable.</p>
+      <h1>The free Gantt chart for Jira that never moves your data</h1>
+      <p class="lead">Native Atlassian Forge app &mdash; capacity planning, epic rollup, critical path, baselines and auto-scheduling. Free for everyone until January 1, 2027, then free forever for teams of 10 or fewer.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary btn-lg" href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=hero&amp;utm_campaign=launch">Try it free on Atlassian Marketplace &rarr;</a>
         <a class="btn btn-ghost btn-lg" href="#demo">Watch the demo</a>
@@ -147,21 +147,21 @@ document.addEventListener('DOMContentLoaded', function() {
   <section class="alt">
     <div class="container">
       <div class="section-head">
-        <h2>Built for Jira teams who think BigGantt is overpriced</h2>
-        <p>A native Forge app that does the 80% of Gantt planning you actually use every day &mdash; at a fraction of the cost of the legacy plugins.</p>
+        <h2>Everything small Jira teams actually use from a Gantt chart</h2>
+        <p>A native Forge app that does the 80% of Gantt planning you reach for every day &mdash; without the price tag or the data transfer of the legacy plugins.</p>
       </div>
       <div class="grid grid-3">
         <div class="card">
-          <h3>Native Forge, no servers</h3>
-          <p>Runs entirely inside Atlassian Cloud. Your Jira issues are the source of truth. No sync engine, no side database, no third-party telemetry.</p>
-        </div>
-        <div class="card">
-          <h3>Priced to undercut</h3>
-          <p>Free up to 10 users forever. $1.20/user/month from 11 users &mdash; roughly 20% cheaper than GanttTable and 34% cheaper than BigGantt.</p>
+          <h3>Runs on Atlassian &mdash; your data stays put</h3>
+          <p>Built on Forge, so it runs entirely inside your Atlassian Cloud tenant. Your Jira issues are the source of truth. No external servers, no sync engine, no side database, no third-party telemetry.</p>
         </div>
         <div class="card">
           <h3>The project primitives, done right</h3>
           <p>Capacity planning, epic rollup, critical path (CPM), baselines, 4 dependency types, auto-scheduling, color rules, facilitated standup mode.</p>
+        </div>
+        <div class="card">
+          <h3>Free where it counts</h3>
+          <p>Free for everyone until January 1, 2027. After that, free forever for teams of 10 or fewer, and $1.20/user/month above that.</p>
         </div>
       </div>
     </div>
@@ -218,80 +218,59 @@ document.addEventListener('DOMContentLoaded', function() {
   <section class="alt">
     <div class="container">
       <div class="section-head">
-        <h2>How we compare on price</h2>
-        <p>Per-user monthly pricing at the 11&ndash;100 tier &mdash; the size most paid teams land in. Source: Atlassian Marketplace, April 2026.</p>
+        <h2>Where your project data actually lives</h2>
+        <p>&ldquo;Runs on Atlassian&rdquo; is an Atlassian Marketplace designation: the app runs entirely on Atlassian infrastructure, so your project data never leaves your tenant. Most Gantt apps for Jira are Connect apps, which send it to the vendor&rsquo;s own servers.</p>
       </div>
       <div class="table-wrap">
         <table class="compare">
           <thead>
             <tr>
-              <th>Plugin</th>
-              <th>1&ndash;10 users</th>
-              <th>11&ndash;100</th>
-              <th>101&ndash;250</th>
-              <th>251&ndash;1,000</th>
-              <th>Runs on Atlassian (Forge)</th>
+              <th>Gantt app for Jira</th>
+              <th>Runs on Atlassian</th>
+              <th>Where your data goes</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="us"><strong>GanttBoard</strong></td>
-              <td class="us yes">Free</td>
-              <td class="us"><strong>$1.20</strong></td>
-              <td class="us">$0.80</td>
-              <td class="us">$0.25</td>
-              <td class="us yes">Yes</td>
+              <td class="us yes">Yes &mdash; Forge</td>
+              <td class="us">Stays in your Atlassian tenant</td>
             </tr>
             <tr>
               <td>GanttTable (DevSamurai)</td>
-              <td class="yes">Free</td>
-              <td>$1.50</td>
-              <td>$1.00</td>
-              <td>$0.30</td>
-              <td class="yes">Yes</td>
-            </tr>
-            <tr>
-              <td>WBS Gantt (Ricksoft)</td>
-              <td class="yes">Free</td>
-              <td>$1.32</td>
-              <td>$0.90</td>
-              <td>$0.47</td>
-              <td class="no">No</td>
+              <td class="yes">Yes &mdash; Forge</td>
+              <td>Stays in your Atlassian tenant</td>
             </tr>
             <tr>
               <td>BigGantt (Appfire)</td>
-              <td class="yes">Free</td>
-              <td>$1.82</td>
-              <td>$1.10</td>
-              <td>$0.46</td>
-              <td class="no">No</td>
+              <td class="no">No &mdash; Connect</td>
+              <td>Sent to the vendor&rsquo;s servers</td>
+            </tr>
+            <tr>
+              <td>WBS Gantt (Ricksoft)</td>
+              <td class="no">No &mdash; Connect</td>
+              <td>Sent to the vendor&rsquo;s servers</td>
             </tr>
             <tr>
               <td>Structure.Gantt (Tempo)</td>
-              <td>$1.00/u</td>
-              <td>$1.27</td>
-              <td>$0.91</td>
-              <td>$0.49</td>
-              <td class="no">No</td>
+              <td class="no">No &mdash; Connect</td>
+              <td>Sent to the vendor&rsquo;s servers</td>
             </tr>
             <tr>
               <td>BigPicture (Appfire)</td>
-              <td class="yes">Free</td>
-              <td>$5.21</td>
-              <td>$4.36</td>
-              <td>$1.44</td>
-              <td class="no">No</td>
+              <td class="no">No &mdash; Connect</td>
+              <td>Sent to the vendor&rsquo;s servers</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="center muted" style="margin-top: 16px;">See <a href="/pricing.html">full pricing</a> including enterprise tiers up to 10,000+ users.</p>
+      <p class="center muted" style="margin-top: 16px;">GanttBoard is free for everyone until January 1, 2027 &mdash; then free forever for teams of 10 or fewer, and $1.20/user/month above that. See <a href="/pricing.html">full pricing</a> including enterprise tiers up to 10,000+ users.</p>
     </div>
   </section>
 
   <section>
     <div class="container center">
-      <p class="muted">Just launched &mdash; early-adopter reviews welcome. <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=social-proof&amp;utm_campaign=launch">Install and leave a review &rarr;</a></p>
+      <p class="muted">Free for everyone until January 1 &mdash; install now and keep the launch rate. <a href="https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira?utm_source=landing&amp;utm_medium=social-proof&amp;utm_campaign=launch">Get it on the Atlassian Marketplace &rarr;</a></p>
     </div>
   </section>
 
@@ -308,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <footer class="site-footer">
   <div class="container">
-    <div>&copy; 2026 GanttBoard &middot; v3.33.0</div>
+    <div>&copy; 2026 GanttBoard &middot; v3.37.0</div>
     <nav aria-label="Footer">
       <a href="/privacy.html">Privacy</a>
       <a href="/eula.html">EULA</a>

@@ -1,6 +1,6 @@
 # End User License Agreement — GanttBoard for Jira
 
-**Effective date:** April 23, 2026
+**Effective date:** August 24, 2026
 **App:** GanttBoard for Jira
 **Publisher:** GanttBoard ("Publisher")
 
@@ -69,8 +69,8 @@ You retain all rights to Your data. The Publisher claims no ownership or license
 
 ## 7. Fees and Subscription
 
-- The App is **free for all users through October 1, 2026**.
-- After October 1, 2026, paid tiers apply per the pricing published on the Atlassian Marketplace listing. Users with 1–10 seats continue to use the App free of charge on the "Free" tier.
+- The App is **free for all users through January 1, 2027**.
+- After January 1, 2027, paid tiers apply per the pricing published on the Atlassian Marketplace listing. Users with 1–10 seats continue to use the App free of charge on the "Free" tier.
 - Billing and collection are handled by Atlassian on the Publisher's behalf. Your billing relationship for the App is governed by Atlassian's billing terms.
 
 ---
