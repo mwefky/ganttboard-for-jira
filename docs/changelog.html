@@ -7,17 +7,17 @@
 <!-- TODO: change getganttboard.com domain in canonical/OG tags if hosting elsewhere -->
 <!-- TODO: add <meta name="google-site-verification" content="..."> and GA4 tag here -->
 <title>Changelog — GanttBoard for Jira</title>
-<meta name="description" content="Release notes for GanttBoard for Jira. Latest version 3.40.0 (September 2026) — full feature list and version history.">
+<meta name="description" content="Release notes for GanttBoard for Jira. Latest version 3.41.0 (September 2026) — full feature list and version history.">
 <link rel="canonical" href="https://getganttboard.com/changelog.html">
 <link rel="icon" type="image/png" href="/assets/logo-144.png">
 <meta property="og:title" content="Changelog — GanttBoard for Jira">
-<meta property="og:description" content="Release notes for GanttBoard for Jira. Latest version 3.40.0, September 2026.">
+<meta property="og:description" content="Release notes for GanttBoard for Jira. Latest version 3.41.0, September 2026.">
 <meta property="og:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
 <meta property="og:url" content="https://getganttboard.com/changelog.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Changelog — GanttBoard for Jira">
-<meta name="twitter:description" content="Release notes for GanttBoard for Jira. Latest version 3.40.0, September 2026.">
+<meta name="twitter:description" content="Release notes for GanttBoard for Jira. Latest version 3.41.0, September 2026.">
 <meta name="twitter:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
 <link rel="stylesheet" href="/assets/styles.css">
 <!-- Google tag (gtag.js) -->
@@ -87,6 +87,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <section>
     <div class="container" style="max-width: 820px;">
+      <article class="changelog-entry">
+        <h2>3.41.0 &mdash; A tooltip that earns its place</h2>
+        <p class="changelog-date">September 2026</p>
+        <ul>
+          <li><strong>Hover now shows dependencies and float</strong> &mdash; the tooltip lists what blocks a task and what it blocks, with issue keys, link type and lag, plus the total float from the critical-path calculation: either how many days of slack a task has, or that it has none and any slip moves the end date. Both were already being computed and thrown away.</li>
+          <li><strong>Baseline drift, at a glance</strong> &mdash; if a baseline is saved, the tooltip says how many days ahead or behind plan the task is running.</li>
+          <li><strong>Fixed: tooltip colours in dark mode</strong> &mdash; the status, overdue and progress colours were hard-coded light-theme values, so the overdue badge appeared as a pale pink block on a dark tooltip. Every colour now follows your Jira theme.</li>
+          <li><strong>Export identifies its rows</strong> &mdash; bars now carry the issue key alongside the summary, so an exported PNG or PDF says which Jira issue each bar is.</li>
+          <li><strong>Removed bulk actions that did nothing</strong> &mdash; the 0/50/100%, Reassign and Delete buttons in the multi-select bar were never wired to anything and silently did nothing when clicked. They are gone until they work.</li>
+        </ul>
+      </article>
+
       <article class="changelog-entry">
         <h2>3.40.0 &mdash; Resizing works again</h2>
         <p class="changelog-date">September 2026</p>
@@ -220,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <footer class="site-footer">
   <div class="container">
-    <div>&copy; 2026 GanttBoard &middot; v3.40.0</div>
+    <div>&copy; 2026 GanttBoard &middot; v3.41.0</div>
     <nav aria-label="Footer">
       <a href="/privacy.html">Privacy</a>
       <a href="/eula.html">EULA</a>
