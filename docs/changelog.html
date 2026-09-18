@@ -7,17 +7,17 @@
 <!-- TODO: change getganttboard.com domain in canonical/OG tags if hosting elsewhere -->
 <!-- TODO: add <meta name="google-site-verification" content="..."> and GA4 tag here -->
 <title>Changelog — GanttBoard for Jira</title>
-<meta name="description" content="Release notes for GanttBoard for Jira. Latest version 3.38.0 (September 2026) — full feature list and version history.">
+<meta name="description" content="Release notes for GanttBoard for Jira. Latest version 3.40.0 (September 2026) — full feature list and version history.">
 <link rel="canonical" href="https://getganttboard.com/changelog.html">
 <link rel="icon" type="image/png" href="/assets/logo-144.png">
 <meta property="og:title" content="Changelog — GanttBoard for Jira">
-<meta property="og:description" content="Release notes for GanttBoard for Jira. Latest version 3.38.0, September 2026.">
+<meta property="og:description" content="Release notes for GanttBoard for Jira. Latest version 3.40.0, September 2026.">
 <meta property="og:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
 <meta property="og:url" content="https://getganttboard.com/changelog.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Changelog — GanttBoard for Jira">
-<meta name="twitter:description" content="Release notes for GanttBoard for Jira. Latest version 3.38.0, September 2026.">
+<meta name="twitter:description" content="Release notes for GanttBoard for Jira. Latest version 3.40.0, September 2026.">
 <meta name="twitter:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
 <link rel="stylesheet" href="/assets/styles.css">
 <!-- Google tag (gtag.js) -->
@@ -87,6 +87,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <section>
     <div class="container" style="max-width: 820px;">
+      <article class="changelog-entry">
+        <h2>3.40.0 &mdash; Resizing works again</h2>
+        <p class="changelog-date">September 2026</p>
+        <ul>
+          <li><strong>Fixed: you can change a task&rsquo;s duration again</strong> &mdash; the link-drag dots sat directly on top of the resize handles and swallowed the click, so dragging a bar&rsquo;s edge started a dependency instead of resizing it. The connector dots now sit just outside the bar, and the bar&rsquo;s edges resize as they should.</li>
+          <li><strong>Connector dots show the dependency type</strong> &mdash; a filled circle is Finish&nbsp;&rarr;&nbsp;Start, a square is Start&nbsp;&rarr;&nbsp;Start, a diamond is Finish&nbsp;&rarr;&nbsp;Finish and a triangle is Start&nbsp;&rarr;&nbsp;Finish. Hollow means nothing is linked there yet. Shapes rather than colours, so they stay readable in dark mode and for colour-blind users.</li>
+          <li><strong>Proper in-app messages</strong> &mdash; notices used to appear as raw browser dialogs showing an Atlassian CDN address. They are now themed toasts that match your Jira theme and don&rsquo;t block the page.</li>
+        </ul>
+      </article>
+
+      <article class="changelog-entry">
+        <h2>3.39.0 &mdash; Opens on projects without priorities</h2>
+        <p class="changelog-date">September 2026</p>
+        <ul>
+          <li><strong>Fixed: &ldquo;Cannot read properties of null&rdquo; on first open</strong> &mdash; Jira Work Management and many team-managed projects switch the Priority field off entirely. GanttBoard assumed it was always present, and one missing field took down the whole timeline. Priority, issue type and status are all read safely now; an unset priority simply shows as &ldquo;None&rdquo;.</li>
+        </ul>
+      </article>
+
       <article class="changelog-entry">
         <h2>3.38.0 &mdash; Opens everywhere, and feedback gets through</h2>
         <p class="changelog-date">September 2026</p>
@@ -202,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <footer class="site-footer">
   <div class="container">
-    <div>&copy; 2026 GanttBoard &middot; v3.38.0</div>
+    <div>&copy; 2026 GanttBoard &middot; v3.40.0</div>
     <nav aria-label="Footer">
       <a href="/privacy.html">Privacy</a>
       <a href="/eula.html">EULA</a>
