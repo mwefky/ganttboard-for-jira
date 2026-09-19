@@ -20,6 +20,59 @@
 <meta name="twitter:description" content="Free for up to 10 users forever. $1.20/user/month from 11 users. Free for everyone through January 1, 2027.">
 <meta name="twitter:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
 <link rel="stylesheet" href="/assets/styles.css">
+<!-- FAQPage structured data. Google retired FAQ rich results for most sites in
+     2023, so this is not chasing a search snippet — it is so AI assistants and
+     other machine readers get the pricing terms as structured text rather than
+     having to infer them from <details> prose. Keep every answer in sync with
+     the visible FAQ below; never state a competitor's price here. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is GanttBoard for Jira really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Through January 1, 2027, GanttBoard is 100% free for every team size — no credit card, no usage caps, no trial countdown. There is no asterisk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens on January 1, 2027?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paid tiers activate. Teams of 10 or fewer users stay on the free tier forever. Teams above 10 get a 30-day grace period to decide, then billing begins at $1.20 per user per month for the 11–100 tier. All existing users are notified via the Atlassian Marketplace before any charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I get a refund if I don't like it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Atlassian Marketplace handles refunds under its standard policy: you can uninstall at any time and the prorated remainder of the current billing period is refunded automatically. There is no separate contract with GanttBoard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is GanttBoard different from BigGantt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BigGantt is an Atlassian Connect app: it runs on the vendor's own servers, so your project data leaves your Atlassian tenant to be processed. GanttBoard is a native Forge app that runs entirely inside Atlassian Cloud and carries the Runs on Atlassian designation — usually the deciding difference if your security review blocks Connect apps. Both give you critical path, baselines, four dependency types and auto-scheduling; GanttBoard adds capacity planning, facilitated standup mode and keyboard shortcuts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GanttBoard support Jira Data Center?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. GanttBoard is currently Jira Cloud only. A Data Center version is on the roadmap post-launch, once there is a meaningful Cloud install base."
+      }
+    }
+  ]
+}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
 <script>
@@ -224,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </details>
         <details>
           <summary>How is it different from BigGantt?</summary>
-          <p>BigGantt is a Connect app built on external servers with a proprietary scheduling engine and a separate control panel. It charges $1.82/user/month at the 11&ndash;100 tier. GanttBoard is a native Forge app &mdash; your data stays inside Atlassian Cloud &mdash; and costs $1.20/user/month, roughly 34% less. Feature-wise you get critical path, baselines, 4 dependency types, and auto-scheduling in both, but GanttBoard adds facilitated standup mode, keyboard shortcuts, and the Runs on Atlassian badge.</p>
+          <p>BigGantt is an Atlassian Connect app: it runs on the vendor&rsquo;s own servers, so your project data leaves your Atlassian tenant to be processed. GanttBoard is a native Forge app that runs entirely inside Atlassian Cloud and carries the Runs on Atlassian designation &mdash; usually the deciding difference if your security review blocks Connect apps. GanttBoard is free for every team size until January 1, 2027, then free forever for teams of 10 or fewer and $1.20/user/month above that. On features, both give you critical path, baselines, four dependency types and auto-scheduling; GanttBoard adds capacity planning, facilitated standup mode and keyboard shortcuts. For BigGantt&rsquo;s current pricing, check its Marketplace listing &mdash; vendors change tiers and we would rather not quote a figure that has gone stale.</p>
         </details>
         <details>
           <summary>Do you support Jira Data Center?</summary>
