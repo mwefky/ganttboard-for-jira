@@ -15,24 +15,18 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/styles.css">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18198456393"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PR499WHPR"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-18198456393');
   gtag('config', 'G-1PR499WHPR');
 </script>
 <script>
-function gtag_report_conversion(url) {
-  var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
-  gtag('event', 'conversion', { 'send_to': 'AW-18198456393/-jLkCLaDkrYcEMnQ2eVD', 'value': 1.0, 'currency': 'EGP', 'event_callback': callback });
-  return false;
-}
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('a[href*="marketplace.atlassian.com"]').forEach(function(link) {
     var url = link.href;
-    link.addEventListener('click', function(e) { e.preventDefault(); gtag('event', 'marketplace_click', { event_category: 'outbound', event_label: url, transport_type: 'beacon' }); gtag_report_conversion(url); });
+    link.addEventListener('click', function(e) { e.preventDefault(); gtag('event', 'marketplace_click', { event_category: 'outbound', event_label: url, transport_type: 'beacon' }); window.location = url; });
   });
 });
 </script>
@@ -90,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </main>
 <footer class="site-footer">
   <div class="container">
-    <div>&copy; 2026 GanttBoard &middot; v3.43.0</div>
+    <div>&copy; 2026 GanttBoard &middot; v3.44.0</div>
     <nav aria-label="Footer">
       <a href="/privacy.html">Privacy</a>
       <a href="/eula.html">EULA</a>
