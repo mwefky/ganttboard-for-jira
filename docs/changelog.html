@@ -7,17 +7,17 @@
 <!-- TODO: change getganttboard.com domain in canonical/OG tags if hosting elsewhere -->
 <!-- TODO: add <meta name="google-site-verification" content="..."> and GA4 tag here -->
 <title>Changelog — GanttBoard for Jira</title>
-<meta name="description" content="Release notes for GanttBoard for Jira. Latest version 3.45.0 (September 2026) — full feature list and version history.">
+<meta name="description" content="Release notes for GanttBoard for Jira. Latest version 3.46.0 (September 2026) — full feature list and version history.">
 <link rel="canonical" href="https://getganttboard.com/changelog.html">
 <link rel="icon" type="image/png" href="/assets/logo-144.png">
 <meta property="og:title" content="Changelog — GanttBoard for Jira">
-<meta property="og:description" content="Release notes for GanttBoard for Jira. Latest version 3.45.0, September 2026.">
+<meta property="og:description" content="Release notes for GanttBoard for Jira. Latest version 3.46.0, September 2026.">
 <meta property="og:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
 <meta property="og:url" content="https://getganttboard.com/changelog.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Changelog — GanttBoard for Jira">
-<meta name="twitter:description" content="Release notes for GanttBoard for Jira. Latest version 3.45.0, September 2026.">
+<meta name="twitter:description" content="Release notes for GanttBoard for Jira. Latest version 3.46.0, September 2026.">
 <meta name="twitter:image" content="https://getganttboard.com/assets/screenshots/01_hero.png">
 <link rel="stylesheet" href="/assets/styles.css">
 <!-- Google tag (gtag.js) -->
@@ -71,6 +71,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <section>
     <div class="container" style="max-width: 820px;">
+      <article class="changelog-entry">
+        <h2>3.46.0 &mdash; Wrong dates can no longer reach your Jira</h2>
+        <p class="changelog-date">November 2026</p>
+        <ul>
+          <li><strong>Fixed: a bad date in one field could rewrite a whole project.</strong> If a start-date field held a value the app couldn&rsquo;t read properly &mdash; an ambiguous short form like <code>01-01-01</code>, for instance &mdash; it was silently accepted as the year 2001. Auto-schedule starts from the earliest date in the plan, so that one task became the project start and everything after it was rescheduled to 2001 and saved back to Jira. Dates are now read strictly: anything that isn&rsquo;t a date Jira actually produces is treated as missing instead of guessed at.</li>
+          <li><strong>The app will no longer write a date it wouldn&rsquo;t accept reading.</strong> Every write back to Jira is now checked first, and anything invalid is skipped and reported rather than saved.</li>
+          <li><strong>Fixed a task duration that could become &ldquo;not a number&rdquo;</strong> when either end of a bar was unreadable, and then spread through scheduling.</li>
+        </ul>
+      </article>
+
       <article class="changelog-entry">
         <h2>3.45.0 &mdash; Asking for a review, properly this time</h2>
         <p class="changelog-date">November 2026</p>
@@ -250,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <footer class="site-footer">
   <div class="container">
-    <div>&copy; 2026 GanttBoard &middot; v3.45.0</div>
+    <div>&copy; 2026 GanttBoard &middot; v3.46.0</div>
     <nav aria-label="Footer">
       <a href="/privacy.html">Privacy</a>
       <a href="/eula.html">EULA</a>
