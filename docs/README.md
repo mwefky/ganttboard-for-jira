@@ -1,74 +1,60 @@
 # GanttBoard for Jira — landing site
 
-Static HTML/CSS/JS marketing site. No framework, no build step.
+Static HTML/CSS/JS marketing site for https://getganttboard.com. No framework,
+no build step. Edit the HTML directly and push.
 
-## Deploy to GitHub Pages
+## Deploy
 
-1. Push this repo to GitHub.
-2. Repository settings > Pages.
-3. Build and deployment: **Deploy from a branch**.
-4. Branch: `main`, Folder: `/docs/landing`.
-5. Save. The site is live at `https://<username>.github.io/<repo>/` within a minute.
-6. (Optional) Add custom domain `getganttboard.com` in repo settings. Add a `CNAME` record pointing to `<username>.github.io` at your DNS provider. Enable "Enforce HTTPS".
+GitHub Pages, already configured:
 
-The empty `.nojekyll` file prevents GitHub Pages from running Jekyll, which would otherwise ignore files and folders starting with underscores.
+- **Branch:** `main`
+- **Folder:** `/docs` ← this directory
+- **Custom domain:** `getganttboard.com`, set by the `CNAME` file here
 
-## Find-and-replace before going live
+Pushing to `main` redeploys. A rebuild takes about a minute, so a page fetched
+immediately after a push can still be the previous version — check twice before
+concluding a change didn't land.
 
-Before first deploy, replace these placeholders across every file:
+The empty `.nojekyll` file stops GitHub Pages running Jekyll, which would
+otherwise ignore files and folders beginning with an underscore.
 
-| Placeholder | Replace with | Files |
-|---|---|---|
-| `https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira` | Actual Atlassian Marketplace listing URL, e.g. `https://marketplace.atlassian.com/apps/123456/ganttboard-for-jira` | All `.html` files |
-| `getganttboard.com` | Your actual domain, if different | All `.html` files, `sitemap.xml`, `robots.txt` |
-
-Quickest way on macOS / Linux:
-
-```bash
-cd docs/landing
-grep -rl 'https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira' . | xargs sed -i '' 's|https://marketplace.atlassian.com/apps/2897452546/ganttboard-for-jira|https://marketplace.atlassian.com/apps/XXX/ganttboard-for-jira|g'
-```
-
-## Before launch: add tracking
-
-Each page has a commented-out slot in `<head>`:
-
-```html
-<!-- TODO: add <meta name="google-site-verification" content="..."> and GA4 tag here -->
-```
-
-Drop in your Google Search Console verification meta tag and GA4 snippet there.
-
-## File tree
+## Structure
 
 ```
-docs/landing/
-├── .nojekyll
-├── README.md
-├── robots.txt
-├── sitemap.xml
-├── index.html                # hero landing
-├── features.html             # 8 feature deep-dives
-├── pricing.html              # pricing grid + FAQ
-├── docs.html                 # getting-started guide
-├── changelog.html            # release notes
-├── blog/
-│   └── jira-gantt-chart-free.html   # cornerstone SEO post
-└── assets/
-    ├── styles.css
-    ├── logo-144.png
-    └── screenshots/
-        ├── 01_hero.png
-        ├── 02_filters.png
-        ├── 03_standup.png
-        ├── 04_dep.png
-        ├── 05_edit.png
-        └── 06_cp_baseline.png
+docs/
+├── index.html              # hero landing page
+├── features.html           # feature overview
+├── features/               # 14 per-feature deep-dive pages
+├── blog/                   # 8 posts, index.html lists them
+├── pricing.html  docs.html  changelog.html
+├── eula.html  privacy.html  security.html
+├── assets/                 # styles.css, logo, screenshots/
+├── CNAME  robots.txt  sitemap.xml  llms.txt
+└── googleae6864541384f9c5.html   # Search Console verification — do not delete
 ```
+
+Add a new page: create the HTML, then add it to `sitemap.xml`. New blog posts
+also need a link from `blog/index.html`.
+
+## Things that are easy to get wrong
+
+- **The Marketplace app id `2897452546` is real.** It appears across the HTML and
+  is the live listing. Do not treat it as a placeholder to be substituted.
+- **Promo date: `January 1, 2027`, everywhere.** Any page carrying a different
+  date is a P0 bug. Grep before shipping copy changes.
+- **The demo video id is `IZAUC6g_PFU`.** Earlier ids (`vRXU3zlNmvw`,
+  `YZza8h4HOvk`) are unlisted on YouTube. An unlisted video still plays when
+  embedded, so a stale embed looks fine and is easy to miss.
+- **No personal identifiers on any public surface** — no personal GitHub links,
+  no personal email. Public contact is `dev@getganttboard.com`.
+- **Competitor claims must be sourced and dated**, or omitted.
 
 ## Notes
 
-- No JS frameworks. One small inline `<script>` per page for the mobile nav toggle; the home page adds a second tiny cycler for the screenshot showcase.
-- No Google Fonts, no third-party trackers, no external CSS.
-- Open Graph + Twitter Card meta set on every page. JSON-LD `SoftwareApplication` schema only on `index.html`.
-- Canonical URLs, sitemap, and robots all assume `https://getganttboard.com/`. Edit if hosting elsewhere.
+- No JS frameworks. One small inline `<script>` per page for the mobile nav
+  toggle; the home page adds a second for the screenshot cycler.
+- No Google Fonts, no analytics, no third-party trackers, no external CSS.
+- Open Graph and Twitter Card meta on every page. JSON-LD `SoftwareApplication`
+  schema on `index.html` only.
+- Canonical URLs, `sitemap.xml` and `robots.txt` all assume
+  `https://getganttboard.com/`.
