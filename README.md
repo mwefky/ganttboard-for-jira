@@ -41,7 +41,7 @@ Or install directly from the [Atlassian Marketplace listing](https://marketplace
 - **Import/export** — MS Project XML round-trip, PNG snapshot, CSV
 - **Dark mode** — follows your Atlassian theme
 
-See the full demo: [youtube.com/watch?v=YZza8h4HOvk](https://www.youtube.com/watch?v=YZza8h4HOvk)
+See the full demo: [youtube.com/watch?v=IZAUC6g_PFU](https://www.youtube.com/watch?v=IZAUC6g_PFU)
 
 ---
 
